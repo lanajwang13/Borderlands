@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lana Wang | Borderlands: Creation and Cruelty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,800;0,900;1,400&family=Lora:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="glass-nav">
+        <div class="logo">Border<span>lands</span></div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn">Home <span class="chevron">▾</span></a>
+                <div class="dropdown-content">
+                    <a href="#definition">01. What Is the Borderlands?</a>
+                    <a href="#context">02. Historical Context</a>
+                    <a href="#anchor">03. Guiding Thread: Caballero</a>
+                    <a href="#solito">04. Modern Reality: Solito</a>
+                    <a href="#theory">05. Theory</a>
+                    <a href="#intersections">06. Intersections</a>
+                </div>
+            </div>
+            <!-- <a href="solidarities.html">Solidarities</a> -->
+            <a href="gallery.html">Cultural Gallery</a>
+            <a href="report.html">Report</a>
+            <a href="#archive" class="pill-btn">Archive</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- HERO -->
+        <header id="hero">
+            <div class="hero-inner">
+                <p class="hero-eyebrow">ENGL105: Borderlands Literatures</p>
+                <div class="dynamic-title">
+                    <span class="top-line">Creation</span>
+                    <span class="middle-line">and</span>
+                    <span class="bottom-line">Cruelty</span>
+                </div>
+                <p class="subtitle">"The Open Wound / Where the Third World Grates"<br><em>— Gloria Anzaldúa</em></p>
+                <div class="hero-guiding-q">
+                    <span class="gq-label">Guiding Question</span>
+                    <p>How has the Borderlands evolved from a legal abstraction into a physical and psychological boundary?</p>
+                </div>
+            </div>
+            <div class="hero-deco" aria-hidden="true">
+                <div class="deco-circle deco-c1"></div>
+                <div class="deco-circle deco-c2"></div>
+                <div class="deco-line"></div>
+            </div>
+        </header>
+
+        <!-- SECTION 01 -->
+        <section id="definition" class="content-section reveal">
+            <div class="section-header">
+                <span class="section-num">01</span>
+                <h2>What Is the Borderlands?</h2>
+            </div>
+            <div class="rich-card intro-card">
+                <div class="intro-layout">
+                    <div class="intro-text">
+                        <p class="lead-in">A liminal space where identities are negotiated in the clash between two distinct worlds.</p>
+                        <p>As defined by Gloria Anzaldúa, it is the space where the "Third World grates against the first and bleeds." In this project, I define the Borderlands as an 
+                            both a legal abstraction and a physical and psychological boundary that "grates" on all those who are adjacent.</p>
+                    </div>
+                    <div class="intro-visual">
+                        <blockquote class="side-quote">"The U.S.-Mexican border <em>es una herida abierta</em> where the Third World grates against the first and bleeds."
+                            <cite>— Gloria Anzaldúa, <i>Borderlands/La Frontera: The New Mestiza</i> </cite>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 02 -->
+        <section id="context" class="content-section reveal">
+            <div class="section-header">
+                <span class="section-num">02</span>
+                <h2>Historical &amp; Geographical Context</h2>
+            </div>
+            <div class="rich-card map-card">
+                <div class="map-timeline-wrapper">
+                    <div class="timeline-container">
+                        <div class="timeline-labels">
+                            <span class="static-year-start">1835</span>
+                            <span class="static-year-mid">1844</span>
+                            <span class="static-year-end">1848</span>
+                        </div>
+                        <div class="timeline-track">
+                            <input type="range" min="0" max="100" value="0" class="timeline-slider" id="timeline-slider">
+                        </div>
+                    </div>
+                    <div class="vertical-slider-box">
+                        <div class="map-layer background-map"><img src="1835.png" alt="Map of the region in 1835"></div>
+                        <div class="map-layer middle-map" id="map-middle"><img src="1844.png" alt="Map of the region in 1844"></div>
+                        <div class="map-layer foreground-map" id="map-foreground"><img src="1848.png" alt="Map of the region in 1848"></div>
+                        <div class="visual-scrub-bar" id="map-bar"></div>
+                        <input type="range" min="0" max="100" value="0" class="map-slider-overlay" id="map-slider">
+                    </div>
+                </div><!-- end map-timeline-wrapper -->
+                <p class="map-caption"> This interactive map demonstrates the changing land ownership between 1838 and 1848, when the Treaty of Guadalupe-Hidalgo offialized those borders.</p>
+            </div><!-- end map-card -->
+
+            <div class="context-columns">
+                <div class="context-stack">
+                    <h3 class="mini-label caballero-label">Caballero Relevance</h3>
+
+                    <div class="flip-card-wrapper" id="flip-aztec">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <details class="analysis-node context-node">
+                                    <summary>
+                                        <div class="summary-content">
+                                            <div class="summary-text">
+                                                <h4>The Promised Land: Aztec</h4>
+                                                <p>Long before American settlers drew borders across the continent, the land held a sacred significance to its indigenous inhabitants, rooted in myth, prophecy, and belonging.</p>
+                                            </div>
+                                        </div>
+                                        <span class="expand-icon">+</span>
+                                    </summary>
+                                    <div class="expanded-content">
+                                        <p>According to Mexican tradition, the Aztecs were instructed by their god, Huitzilopochtli, to build their city where they saw an eagle perched on a cactus, devouring a serpent. After trekking across the landscape for generations, this vision was found and the capital city, Tenochtitlan, was founded. This origin story casts the landscape itself as one that was divinely chosen, framing settlement as a fulfillment of prophecy rather than a conquest of vacant land, giving the land itself an even deeper, more sacred meaning than just settlement. Centuries later, the sentiment of <span class="glossary-point" data-def="manifest-destiny">Manifest Destiny</span> would recycle a similar logic in the United States, where settlers would claim that expansion across the continent was ordained by God, though their God was different, and it was to the detriment of the native people already settled there. The same territory that once symbolized promise and divine establishment becomes the stage on which competing visions of destiny and ownership collide, laying the groundwork for the borderlands that <em>Caballero</em> and <em>Solito</em> inherit.</p>
+                                        <button class="sources-btn" onclick="document.getElementById('flip-aztec').classList.add('flipped'); event.stopPropagation();">Sources ↗</button>
+                                        <div class="glossary-defs">
+                                            <div id="def-manifest-destiny"><strong>Manifest Destiny:</strong> The belief in the inevitability of the continued territorial expansion of the boundaries of the United States. <em>— Britannica</em></div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Sources</h5>
+                                <ul>
+                                    <li><a href="https://www.wanderlustcreatures.com/post/the-eagle-the-serpent-and-the-cactus-mexico-s-legendary-flag-origin-story" target="_blank">The Eagle, the Serpent, and the Cactus — Wanderlust Creatures</a></li>
+                                    <li><a href="https://en.wikipedia.org/wiki/Coat_of_arms_of_Mexico" target="_blank">Coat of Arms of Mexico — Wikipedia</a></li>
+                                    <li><a href="https://education.nationalgeographic.org/resource/tenochtitlan/" target="_blank">Tenochtitlan — National Geographic Education</a></li>
+                                </ul>
+                                <button class="flip-back-btn" onclick="document.getElementById('flip-aztec').classList.remove('flipped')">← Back</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-wrapper" id="flip-native">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <details class="analysis-node context-node">
+                                    <summary>
+                                        <div class="summary-content">
+                                            <div class="summary-text">
+                                                <h4>The Native People</h4>
+                                                <p>The displacement of indigenous populations represents the first wave of colonial erasure — a foundational violence that the arrival of both Spanish and Anglo settlers would continue and compound.</p>
+                                            </div>
+                                        </div>
+                                        <span class="expand-icon">+</span>
+                                    </summary>
+                                    <div class="expanded-content">
+                                        <p>Before Spanish colonization and long before the Treaty of Guadalupe Hidalgo formalized any land negotiations, the lands that would become Texas, California, and the Southwest were inhabited by diverse Indigenous populations with their own boundaries, cultures, and sacred geographies. Spanish and later Mexican ranching projects, like the haciendas that Rancho De La Palma became, depended on pushing these communities off their land, often resulting in mass violence, death, or forced labor. When the US arrives later, it does not introduce disruption to these Indigenous groups, but continues its tradition; the same valleys and rivers are claimed and reclaimed by various powers, while Indigenous people are consistently and violently pushed to the margins. <em>Caballero</em> and <em>Solito</em> are just examples of one iteration of the generational violence and trauma of the border and borderlands, one that is likely to continue.</p>
+                                        <button class="sources-btn" onclick="document.getElementById('flip-native').classList.add('flipped'); event.stopPropagation();">Sources ↗</button>
+                                    </div>
+                                </details>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Sources</h5>
+                                <ul>
+                                    <li><a href="https://www.ssc.wisc.edu/soc/racepoliticsjustice/2017/07/12/what-the-treaty-of-guadalupe-actually-says/" target="_blank">What the Treaty of Guadalupe Actually Says — UW–Madison</a></li>
+                                    <li><a href="https://www.indigenousmexico.org/articles/the-indigenous-groups-along-the-lower-rio-grande" target="_blank">Indigenous Groups Along the Lower Rio Grande — Indigenous Mexico</a></li>
+                                </ul>
+                                <button class="flip-back-btn" onclick="document.getElementById('flip-native').classList.remove('flipped')">← Back</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-wrapper" id="flip-disputed">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <details class="analysis-node context-node">
+                                    <summary>
+                                        <div class="summary-content">
+                                            <div class="summary-text">
+                                                <h4>Arrival of Americanos: Disputed Lands</h4>
+                                                <p>The arrival of Anglo-American settlers in the early 19th century transformed a region of relative autonomy into a contested frontier, upending the social fabric of Mexican ranching communities.</p>
+                                            </div>
+                                        </div>
+                                        <span class="expand-icon">+</span>
+                                    </summary>
+                                    <div class="expanded-content">
+                                        <p>By the 1840s, the United States and Mexico both claimed the lands between the Nueces River and the Rio Grande, framing the region as "disputed" even though it was already home to Mexican communities and Indigenous nations. The US annexation of Texas in 1845, followed by President Polk's push to purchase more northern Mexican territory, escalated tensions into open war in 1846, with US troops advancing deep into Mexican territory. For Mexican ranching families like the fictional Mendozas in <em>Caballero</em>, the conflict meant that their homes became battlefields and their legal titles suddenly depended on which flag was flying above them. The war ended with the Treaty of Guadalupe Hidalgo in 1848; it transformed a contested frontier into a border where Mexican residents now found themselves on the "wrong" side of a map they had not drawn.</p>
+                                        <button class="sources-btn" onclick="document.getElementById('flip-disputed').classList.add('flipped'); event.stopPropagation();">Sources ↗</button>
+                                    </div>
+                                </details>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Sources</h5>
+                                <ul>
+                                    <li><a href="https://www.ssc.wisc.edu/soc/racepoliticsjustice/2017/07/12/what-the-treaty-of-guadalupe-actually-says/" target="_blank">What the Treaty of Guadalupe Actually Says — UW–Madison</a></li>
+                                    <li><a href="https://www.nps.gov/places/the-mexican-american-war.htm" target="_blank">The Mexican–American War — National Park Service</a></li>
+                                    <li><a href="https://constitutioncenter.org/blog/the-mexican-american-war-in-a-nutshell" target="_blank">The Mexican–American War in a Nutshell — Constitution Center</a></li>
+                                </ul>
+                                <button class="flip-back-btn" onclick="document.getElementById('flip-disputed').classList.remove('flipped')">← Back</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-wrapper" id="flip-treaty">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <details class="analysis-node context-node">
+                                    <summary>
+                                        <div class="summary-content">
+                                            <div class="summary-text">
+                                                <h4>Supposed Compromise</h4>
+                                                <p>The Treaty of Guadalupe Hidalgo promised Mexican residents full citizenship and land protections — promises that were swiftly and systematically broken in the decades that followed.</p>
+                                            </div>
+                                        </div>
+                                        <span class="expand-icon">+</span>
+                                    </summary>
+                                    <div class="expanded-content">
+                                        <p>Signed in 1848, the Treaty of Guadalupe Hidalgo transferred roughly half of Mexico's territory to the United States and promised that Mexicans who remained in the ceded lands could keep their property and choose US citizenship. On paper, the treaty guarantees that pre-existing property rights will be "inviolably respected," and that residents can stay where they are and retain or change nationality without losing their land. In practice, enforcement varied wildly: in many regions Mexican landowners were stripped of their holdings through legal technicalities, fraud, or direct violence, while others were pressured or attacked until they left. The "compromise" that was supposed to stabilize the border instead created a new borderland identity that people both fell into or were trapped under; for many, the home that they had had for generations had suddenly transformed into a borderland space, and there was no manual or directive on how to act.</p>
+                                        <button class="sources-btn" onclick="document.getElementById('flip-treaty').classList.add('flipped'); event.stopPropagation();">Sources ↗</button>
+                                    </div>
+                                </details>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Sources</h5>
+                                <ul>
+                                    <li><a href="https://www.ssc.wisc.edu/soc/racepoliticsjustice/2017/07/12/what-the-treaty-of-guadalupe-actually-says/" target="_blank">What the Treaty of Guadalupe Actually Says — UW–Madison</a></li>
+                                    <li><a href="https://www.archives.gov/milestone-documents/treaty-of-guadalupe-hidalgo" target="_blank">Treaty of Guadalupe Hidalgo — National Archives</a></li>
+                                </ul>
+                                <button class="flip-back-btn" onclick="document.getElementById('flip-treaty').classList.remove('flipped')">← Back</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="context-stack">
+                    <h3 class="mini-label solito-label">Solito Relevance</h3>
+
+                    <div class="flip-card-wrapper" id="flip-policing">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <details class="analysis-node context-node theme-solito">
+                                    <summary>
+                                        <div class="summary-content">
+                                            <div class="summary-text">
+                                                <h4>The Policing of the Line</h4>
+                                                <p>What began as an invisible political boundary gradually hardened into a militarized frontier, marking a fundamental shift in how the border was experienced by those who lived near or crossed it.</p>
+                                            </div>
+                                        </div>
+                                        <span class="expand-icon">+</span>
+                                    </summary>
+                                    <div class="expanded-content">
+                                        <p>For decades after 1848, the US-Mexico border was loosely enforced; inspectors and local sheriffs monitored movement, but economic dependence on Mexican labor meant that the line often functioned more as a segregation tool than a barrier. That changed in 1924, when Congress created the <span class="glossary-point" data-def="border-patrol">US Border Patrol</span> with a dedicated budget and mandate to prevent illegal entries, primarily along the southern border. What had been a political abstraction that powerful men could effectively ignore now became an institutionally policed space, complete with armed officers, patrol routes, and the authority to detain and expel.</p>
+                                        <button class="sources-btn" onclick="document.getElementById('flip-policing').classList.add('flipped'); event.stopPropagation();">Sources ↗</button>
+                                        <div class="glossary-defs">
+                                            <div id="def-border-patrol"><strong>US Border Patrol:</strong> Federal law enforcement agency established in 1924 and tasked with detecting and preventing illegal entry into the United States along its borders.</div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Sources</h5>
+                                <ul>
+                                    <li><a href="https://www.ebsco.com/research-starters/history/us-congress-establishes-border-patrol" target="_blank">US Congress Establishes Border Patrol — EBSCO</a></li>
+                                    <li><a href="https://www.cbp.gov/border-security/along-us-borders/history" target="_blank">History of Border Security — US CBP</a></li>
+                                    <li><a href="https://en.wikipedia.org/wiki/United_States_Border_Patrol" target="_blank">United States Border Patrol — Wikipedia</a></li>
+                                </ul>
+                                <button class="flip-back-btn" onclick="document.getElementById('flip-policing').classList.remove('flipped')">← Back</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-wrapper" id="flip-bracero">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <details class="analysis-node context-node theme-solito">
+                                    <summary>
+                                        <div class="summary-content">
+                                            <div class="summary-text">
+                                                <h4>The Bracero Era &amp; Labor</h4>
+                                                <p>For much of the 20th century, the border functioned less as a wall than as a valve — selectively opened to welcome cheap labor, then closed when that labor was no longer deemed convenient.</p>
+                                            </div>
+                                        </div>
+                                        <span class="expand-icon">+</span>
+                                    </summary>
+                                    <div class="expanded-content">
+                                        <p>From 1942 to 1964, the <span class="glossary-point" data-def="bracero">Bracero Program</span> brought more than four million Mexican workers to the United States as "guest" laborers, especially in agriculture and railroad work. The US government promoted the program to solve wartime labor shortages, while Mexican rural communities were emptied of men, leaving women to shoulder unpaid and underpaid work, manage households, and service braceros moving north. This system normalized a pattern where the border opened for cheap, controllable labor but offered little protection or stability to the workers or their families. When Javier travels north decades later, he joins generations of people who crossed not because the border was welcoming, but because the US had long treated Mexican and Central American bodies as temporary, disposable labor rather than full participants.</p>
+                                        <button class="sources-btn" onclick="document.getElementById('flip-bracero').classList.add('flipped'); event.stopPropagation();">Sources ↗</button>
+                                        <div class="glossary-defs">
+                                            <div id="def-bracero"><strong>Bracero Program:</strong> A series of bilateral agreements (1942–1964) between the US and Mexico that allowed millions of Mexican men to work temporarily in the US, primarily in agriculture.</div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Sources</h5>
+                                <ul>
+                                    <li><a href="https://insights.tetakawi.com/the-history-of-the-maquiladora" target="_blank">History of the Maquiladora — Tetakawi</a></li>
+                                    <li><a href="https://www.britannica.com/technology/maquiladora" target="_blank">Maquiladora — Britannica</a></li>
+                                </ul>
+                                <button class="flip-back-btn" onclick="document.getElementById('flip-bracero').classList.remove('flipped')">← Back</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-wrapper" id="flip-maquiladora">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <details class="analysis-node context-node theme-solito">
+                                    <summary>
+                                        <div class="summary-content">
+                                            <div class="summary-text">
+                                                <h4>Maquiladoras</h4>
+                                                <p>Maquiladoras made the border an economic engine, drawing workers south of the line while funneling profits across it.</p>
+                                            </div>
+                                        </div>
+                                        <span class="expand-icon">+</span>
+                                    </summary>
+                                    <div class="expanded-content">
+                                        <p>After the Bracero Program ended, <span class="glossary-point" data-def="maquiladora">maquiladoras</span> emerged as the next phase of border labor, with US and foreign companies setting up factories just south of the border to exploit Mexico's lower wages and lax regulations. The 1994 passage of NAFTA turbocharged this system, concentrating hundreds of assembly plants in cities like Tijuana and Ciudad Juárez, where mostly young women stitched garments, wired electronics, and assembled cars for export back to the United States. These factories created jobs but also dependency, turning the border zone into a one-way economic corridor where Mexican workers generated wealth for American consumers without gaining access to the full rights or wages on the other side. The family separations in <em>Solito</em> echo this longer pattern; Javier's parents crossed decades earlier into a labor system that demanded their bodies but rarely their permanence, leaving children like him to follow the same economic pull years later.</p>
+                                        <button class="sources-btn" onclick="document.getElementById('flip-maquiladora').classList.add('flipped'); event.stopPropagation();">Sources ↗</button>
+                                        <div class="glossary-defs">
+                                            <div id="def-maquiladora"><strong>Maquiladora:</strong> A factory in Mexico, typically near the US border, that operates under favorable tax arrangements to assemble goods for export, often employing low-wage labor.</div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Sources</h5>
+                                <ul>
+                                    <li><a href="https://insights.tetakawi.com/the-history-of-the-maquiladora" target="_blank">History of the Maquiladora — Tetakawi</a></li>
+                                    <li><a href="https://www.britannica.com/technology/maquiladora" target="_blank">Maquiladora — Britannica</a></li>
+                                    <li><a href="https://dismalscience.journalism.cuny.edu/2025/05/18/as-trade-war-with-mexico-drags-on-border-manufacturing-awaits-its-fate/" target="_blank">Border Manufacturing & Trade War — CUNY</a></li>
+                                </ul>
+                                <button class="flip-back-btn" onclick="document.getElementById('flip-maquiladora').classList.remove('flipped')">← Back</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-wrapper" id="flip-gatekeeper">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <details class="analysis-node context-node theme-solito">
+                                    <summary>
+                                        <div class="summary-content">
+                                            <div class="summary-text">
+                                                <h4>Cementing the Boundaries (1994)</h4>
+                                                <p>The construction of large-scale border infrastructure in the mid-1990s did not stop migration — it redirected it into deadlier terrain, transforming geography itself into an instrument of enforcement.</p>
+                                            </div>
+                                        </div>
+                                        <span class="expand-icon">+</span>
+                                    </summary>
+                                    <div class="expanded-content">
+                                        <p>Launched in 1994, <span class="glossary-point" data-def="gatekeeper">Operation Gatekeeper</span> flooded the San Diego–Tijuana corridor with new fences, lights, cameras, and agents, aiming to stop migrants from crossing in populated areas. Instead of halting migration, the policy forced people into Arizona and New Mexico deserts, where extreme heat, dehydration, and exposure killed thousands in the years that followed. The strategy deliberately weaponized geography itself, making natural barriers do the work that walls and patrols could not. <em>Solito</em> unfolds in this transformed landscape, where Javier's desert trek reflects how 1990s enforcement turned the border into a machine that does not just block passage, but actively selects for suffering.</p>
+                                        <button class="sources-btn" onclick="document.getElementById('flip-gatekeeper').classList.add('flipped'); event.stopPropagation();">Sources ↗</button>
+                                        <div class="glossary-defs">
+                                            <div id="def-gatekeeper"><strong>Operation Gatekeeper:</strong> A 1994 US Border Patrol initiative that militarized the San Diego–Tijuana crossing, inadvertently funneling migrants into more dangerous desert routes.</div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Sources</h5>
+                                <ul>
+                                    <li><a href="https://rosenbergfound.org/on-25th-anniversary-operation-gatekeeper-blamed-for-border-deaths-dehumanization-of-migrants/" target="_blank">Operation Gatekeeper at 25 — Rosenberg Foundation</a></li>
+                                    <li><a href="https://oig.justice.gov/sites/default/files/archive/special/9807/gkp01.htm" target="_blank">Operation Gatekeeper Report — DOJ OIG</a></li>
+                                    <li><a href="https://blogs.law.ox.ac.uk/research-subject-groups/centre-criminology/centreborder-criminologies/blog/2015/04/racism-and" target="_blank">Racism and Border Criminology — Oxford Law</a></li>
+                                </ul>
+                                <button class="flip-back-btn" onclick="document.getElementById('flip-gatekeeper').classList.remove('flipped')">← Back</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 03 -->
+        <section id="anchor" class="content-section reveal">
+            <div class="section-header">
+                <span class="section-num">03</span>
+                <h2>Guiding Thread: <em>Caballero</em></h2>
+            </div>
+            <div class="analysis-stack">
+                <details class="analysis-node">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="step-num">3.1</span>
+                            <div class="summary-text">
+                                <h4>Colonialism: A Cycle</h4>
+                                <p>Before the Mexican people were displaced by these land disputes, there were vast indigenous populations who were driven out first.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content">
+                        <p>To truly grasp the rise and fall of the generational Haciendas that dotted the plains of what is now Texas, including Hacienda De La Palma explored in <em>Caballero</em>, the <strong>cycle of colonialism</strong> must be acknowledged first.</p>
+                        <br>
+                        <p>This cycle makes uncomfortably clear that the Borderlands did not begin as a legal abstraction amidst the friction with the Americanos to the North; the Treaty of 1848 was merely the latest signature on a much older document, one that was written first in the displacement of the indigenous people from the lands the Spanish and Mexican ranching class would come to claim as their own. The arrival of the white Americans on the Texas landscape alarms Don Santiago, as he fears for the rituals, practice, and illusion of permanence that Hacienda De La Palma promises, not realizing that the violent intrusion of these outsiders is the same violence he and his inflict upon the indigenous populations daily. The very existence of the Hacienda speaks to the driving out of the native populations that used to inhabit the land; Don Santiago's later death and the subsequent handing of the Hacienda over to his children, all married to white American men, highlights this cyclical nature of colonialism well.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "... he and a number of his friends, all rich landowners of the north, would colonize the Indian-infested region just explored in exchange for all the grazing land they could hold… the colonization of the new land began" <cite>(González xxxvii)</cite>
+                        </blockquote>
+
+                        <p>Here, one of Don Santiago's predecessors, Don Ramón, had been given permission by the Spanish Crown to colonize the lands of what's now Texas, with full "authority" to force the indigenous populations out through violence and force. Notably, as the indigenous peoples were already actively inhabiting the land, the Spanish Crown did not have the authority to give this land freely to any wealthy landowner who could claim it. Additionally, the language used in relation to the "Indians" has to be noted, with Rancho De La Palma's founder believing them to be "infesting" the land despite it belonging to the native populations to begin with.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "Here he would create a new empire… could rear his family and keep the old ways and traditions, safely away from the… the infiltration of foreign doctrines…for the generations to come" <cite>(González xxxvi)</cite>
+                        </blockquote>
+
+                        <p>The logic surrounding Don Ramón's empire-building is not far off from the ideology of <span class="glossary-point" data-def="manifest-destiny">Manifest Destiny</span> that drove Anglo-Saxon settlers across North America during the 19th century. Ironically, it's this same manifest destiny that drives the American settlers to eventually dismantle the Mexican settlements in Texas, as they too believe their culture and civilizations to be the brightest and best; both peoples seek to claim the land as their right.</p>
+                        <br>
+                        <p>The border drawn across the Texas landscape does not introduce violence or entitlement to this geography, but rather reopens the wounds opened by the wealthy Mexican landowners that had previously sought to claim the land for themselves. The cycle of colonialism is therefore inherited, whether consciously or not, and all parties are left impacted. In this instance, the indigenous populations become the enemy of both the American and Mexican settlers, while the American and Mexican settlers have their own rivalries to consider. As Anzaldúa notes, the borderlands are not a physical space, but rather a state of being; it's an open wound that cannot fully heal until its conditions of creation, including colonialism, are dismantled.</p>
+
+                        <div class="glossary-defs">
+                            <div id="def-manifest-destiny"><strong>Manifest Destiny:</strong> The belief in the inevitability of the continued territorial expansion of the boundaries of the United States. <em>— Britannica</em></div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="analysis-node">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="step-num">3.2</span>
+                            <div class="summary-text">
+                                <h4>Social Hierarchies &amp; Power</h4>
+                                <p>The strict boundaries between financial and social classes creates another "borderland" where the disgruntled lead the call for change.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content">
+                        <p>The Mendoza family is a prime example of the distinctly layered social hierarchies within haciendas, and through Don Santiago's view and treatment of those under his care, we begin to see how divisions born from different "borderlands" deepen the more documented borderland forming between nations. The hacienda system explored in <em>Caballero</em> operates on the foundation that social hierarchy is natural, God-given, and mutually beneficial; it has long been cemented as a seemingly natural part of Mexican culture. González spends the novel methodically dismantling this premise. Through the treatment of the workers at Rancho De La Palma, and other haciendas in the area, she reveals that this carefully crafted hierarchy was never just about tradition or order; it was about the control of bodies and the suppression of personhood. There is an internal borderland created not at the Rio Grande, but within the hacienda's own walls, and within the social systems engineered into the hacienda system. It is the fractures opened at this internal borderland that allow the transformation occurring between the United States and Mexico to take root.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "The gringos hire Mexicans, pay them well, and they can do what they please with the money. Not like our masters who charge us for rags of clothes and tobacco at so high a price that we are always in debt to them and are never paid a wage." <cite>(González 220)</cite>
+                        </blockquote>
+
+                        <p>Estéban, a <span class="glossary-point" data-def="peon">peon</span> worker, makes the economic disparity of this borderland legible at a party held at Rancho De La Palma, explaining to fellow workers that the hacienda charges inflated prices for basic goods. This, in tandem with wages that are scarcely ever paid, ensures a permanent debt and permanent immobility. The Americans, he argues, offer something that the hacienda system has never and will never be able to: the legal and financial recognition of their labor and personhood. The archaic ownership system inherent to haciendas creates an imbalance that those on the lower level chafe at; the peones do not move towards the Americans out of cultural betrayal, but because of the borders that the social hierarchy system of the haciendas has created around them that fails to acknowledge the peon's autonomy or humanity.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "The peon belongs to the master and none dare say no to him, though he take their daughters and their wives. I for one will watch my chance to work for an Americano. Our souls are not our own now." <cite>(González 220)</cite>
+                        </blockquote>
+
+                        <p>The border drawn around the lower class within the hacienda system is made most clear in the coachman's account of Ema, an orphaned peon worker who had been exploited by her master from childhood, with her body and autonomy being treated as an extension of the hacienda's property. This is not a loophole within the system; it is a clear example of the system working as intended. The paternal pretense is dropped as the harsh reality reveals that these social hierarchies exist not to protect those within and ensure working order, but to maintain a regime of ownership with the wealthy in perpetual power. The borderlands in this instance prove to be a psychological wound and a space where identity and consent are policed and personhood is made conditional on the basis of class. The hacienda enacts these borders within its own walls, and it is these injustices that drove many towards a foreign promise for a better life.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "The servant belongs to the master, Gregorio, as does everything he has. God made the one to serve the other and that is the law." <cite>(González 297)</cite>
+                        </blockquote>
+
+                        <p>Gregorio, who is established to be one of Don Santiago's most skilled workers that has earned the privilege of addressing Don Santiago without proper titling through years of loyal and valued servitude, confronts Don Santiago in this instance about Álvaro's sexual advances towards his granddaughter. Rather than resolve the situation and treat Gregorio and his family with dignity, respect, or humanity, Don Santiago chooses to reinforce the archaic hierarchical rules, deepening the class borders between the two as he uses religion and proverbial verbiage to justify his and Álvaro's entitlement. Following this confrontation, Gregorio and his wife set out to leave the hacienda for an American rancho; the significance of his departure is in the realization that living inside the hacienda was never a contract between two parties, but a condition of existence.</p>
+                        <br>
+                        <p>These are the cracks in which the borderlands highlighted by the Treaty of 1848 take root. The peones of the haciendas that dot the landscape do not live under the authority of the hacienda's head, but inside of it; they are bounded by debt, custom, and the constant threat of violation and violence, in a borderland that has no geographic boundaries, but rather, social and financial ones that must be weathered in daily life, and across generations.</p>
+
+                        <div class="glossary-defs">
+                            <div id="def-peon"><strong>Peon:</strong> A laborer bound to an estate through debt, required to work for the landowner in exchange for housing, goods, and nominal wages — conditions that ensured permanent economic dependence.</div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="analysis-node">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="step-num">3.3</span>
+                            <div class="summary-text">
+                                <h4>Gendered Boundaries</h4>
+                                <p>Characters of all genders were bound by strict ideas of propriety and duty, and their dismantling of these boundaries through both escape and direct action mirrors the real struggle of Mexican individuals to break free of traditional gender roles, highlighting the precarious yet powerful role of the women leading the call for change.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content">
+                        <p>The borderlands of <em>Caballero</em> are not drawn only between nations, but also within the home itself, and along lines of gender, duty, and propriety. These interior boundaries predate the Treaty of 1848 and the arrival of American settlers; they were already fully operational, already enforced through shame, exile, and silence, long before any legal abstraction formalized the external one. González maps these gendered borders with precision, showing how the members of Rancho De La Palma are assigned not just roles but territories, expectations, and the consequences that follow any deviation from them. To cross these boundaries, even in the name of life or death, is to invite exile and shame. Through the characters of Susanita, Luis, their mother Doña María Petronilla, and the widowed Doña Dolores, González makes the pointed argument that the patriarchal logic sustaining the hacienda's social hierarchies does not begin at the Rio Grande, but within the walls of the hacienda itself, and long before any physical border was constructed.</p>
+
+                        <p>Susanita's arc is the novel's clearest demonstration of the gendered borderland as a mechanism of control. Her love for American Officer Warrener already places her in direct conflict with Don Santiago's conception of family honor, but it is her decision to ride through the night with a male peon and no escort to save Álvaro's life that makes González's critique most legible. Susanita transgresses every rule of propriety assigned to a woman of her class in a single night, and does so only in service of the brother and father who had long disrespected her personhood. The response of both Don Santiago and Álvaro is not gratitude but disappointment and ultimately expulsion; Don Santiago claims he would prefer a dead child to one who violates the norms of propriety in such a way. Her subsequent exit to build a life with Warrener is not framed as tragedy but as escape, and often the only one available to women who refuse to fit within the narrow confines of their gendered borderlands.</p>
+
+                        <p>Luis represents a quieter version of the same trap; despite being born male and the second son to the household, he has his own expectations placed upon him that he ultimately feels unable to fulfill, choosing to exile himself in a similar manner as Susanita. Don Santiago belittles him for being unable to perform to the levels of masculinity, or having the <span class="glossary-point" data-def="machismo">machismo</span> the hacienda demands; Luis' artistry, though exceptional, marks him a failure within the terms of the gendered, bordered system, and ultimately makes him dead to Don Santiago following his departure. When Luis meets Captain Devlin, who recognizes and pays tribute to his artistry, he realizes duty does not have to be the end-all be-all he had grown up believing it to be. It is Padre Pierre, who had long witnessed Luis torn between his gift and his obligations, who articulates what the novel has been showing all along:</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "Sometimes one is a traitor only to himself, Luis Gonzaga... duty is a word too often used to cloak selfishness and coercion. God gave you this great gift — watch that you do not throw it away." <cite>(González 156)</cite>
+                        </blockquote>
+
+                        <p>Padre Pierre's words reframe the entire logic of the gendered borderland: the duty Luis has been shamed into performing is not noble obligation, but coercion dressed in the language of honor and expectation. That Luis fears his tears are "unmanly" even in this moment of recognition speaks to how deeply the hacienda's borders have been internalized; the cage does not need walls when it has already been built inside the person. His departure to America mirrors Susanita's, and the system's insistence on rigid performance over individual personhood ensured its loss of both; the external border that would arrive with the Treaty of 1848 did not create this dynamic of exile and erasure, it merely inherited it.</p>
+
+                        <p>Doña Dolores, Don Santiago's widowed sister, names this system most plainly following Don Santiago's unilateral decision on the fate of their daughters, a decision none but himself saw value in.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "I have always resented, Petronilla, a man ruling me as if I were a bought slave, but here in this house there is nothing that can be done about it." <cite>(González 236)</cite>
+                        </blockquote>
+
+                        <p>Doña Dolores has more freedom than most women in the novel; her widowhood grants her a frankness that the hacienda's wives are not permitted. But González is careful to show that naming the cage does not dissolve it; Don Santiago tolerates his sister's presence only out of obligation, making his irritation at her outspokenness clear and ensuring she feels the weight of her perceived burden on him. Not only does she compare her condition to slavery, but she equates the position of all women to one without autonomy or systemic justice; in the same breath she acknowledges it is simply a way of life and nothing can be done about it, highlighting how these gendered borderlands make those within them feel powerless. The sigh that follows is described as "the sigh of woman the vassal, its echo centuries old" (González 236), lifting her personal resentment into something historical and structural; it is not just Don Santiago himself that Doña Dolores must contend with, but the systems he upholds and represents.</p>
+
+                        <p>Doña María Petronilla is the anchoring point between all these stories; she represents the woman who never crossed the border at all, and what that cost her.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "In the twenty-five years of marriage to this man, she had fashioned only the armor of meekness to meet his dominance, and it gave her no protection." <cite>(González 26)</cite>
+                        </blockquote>
+
+                        <p>María Petronilla represents the culmination of total compliance; she is a woman who has fully absorbed the hacienda's expectations and bent to them, ceasing to exist outside of how the hacienda, and its master, defines her. Her loss to the system does not make her a villain, however, but a warning, one her daughters seem to recognize and resist. Her "armor of meekness" is not protection but capitulation masked as virtue; it is a strategy of survival rather than a reflection of her personhood, and it is revealed that Don Santiago chose Doña María as a wife specifically for this quality. Her subservience is not a coincidence but a condition of the marriage. The system's cruelty is made even more apparent when Don Santiago later blames her for these same qualities he hand-selected, desiring a stronger-willed partner who would still capitulate to his demands. In essence, Doña María was chosen for her compliance yet is punished for it; she is trapped in a liminal space where autonomy and personhood are out of reach, but labor and servitude are ample.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "She sighed again, knowing herself to be incapable of it as it was to reach out and pluck the stars from the heavens and sew them around the hem of a dress." <cite>(González 238)</cite>
+                        </blockquote>
+
+                        <p>This image arrives after Doña María speaks out against Don Santiago for one of the few times in her life. She confides to Doña Dolores that it does not seem fair for her husband to dictate their lives, then advocates directly to Don Santiago in an attempt to save her daughter from a marriage as unhappy as her own. He lets her speak but ignores the appeal entirely, leaving the room without a word or look back. María Petronilla does not lack understanding; she lacks the structural permission to act on it, and twenty-five years of meekness have made that permission feel unreachable. She is the proof of what the gendered borderland costs when it is never crossed: not exile, like her children, but erasure. It is this internalized, psychological condition of boundedness that Anzaldúa identifies as the true nature of the borderlands; not merely a legal abstraction, but a state of being that precedes the treaty, outlasts it, and lives on in the silence of every person taught that the cage was simply the law.</p>
+
+                        <p>That Don Santiago dies by his own hand while those he dismissed return to claim the hacienda is González's final word; the borders he drew around his household did not protect it, they emptied it of everyone it needed to survive.</p>
+
+                        <div class="glossary-defs">
+                            <div id="def-machismo"><strong>Machismo:</strong> A cultural value system emphasizing dominant, aggressive masculinity and male authority, often used to enforce strict gender roles and hierarchies.</div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="analysis-node">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="step-num">3.4</span>
+                            <div class="summary-text">
+                                <h4>Traditionalism Challenged: Change</h4>
+                                <p>The transition to new systems, beliefs, and practices is often seen as a "sacrifice," but both old and new can co-exist and thrive.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content">
+                        <p><em>Caballero</em> closes not with the erasure of Mexican tradition but with its adaptation; the hacienda does not simply fall, it transforms, passing into the hands of the Mendoza daughters and their American husbands who prove themselves willing and capable stewards of the land and its legacy. González's argument is not that the old ways must be abandoned, but that the borderland Don Santiago constructs between Mexican and American identity is built on pride and unfamiliarity rather than any genuine incompatibility of values. It is the women of the household who recognize this first, and McLane himself who proves it most plainly.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "The true gentleman cannot hide his heritage and he is that. He looks good. So many of our young men are anything but good." <cite>(González 236)</cite>
+                        </blockquote>
+
+                        <p>Doña María Petronilla's assessment of Warrener cuts directly against Don Santiago's insistence that the Americans represent an alien and inferior culture. She does not evaluate Warrener by his nationality but by the same standard Don Santiago claims to prize above all else: gentility, honor, and bearing. That she finds him not lacking but exemplary, and measures him against Mexican men who fall short of the same standard, is González's sharpest subversion of the novel's central conflict. The borderland Don Santiago has drawn is not between civilization and its absence, but between his pride and his reason; it is a distinction the women of Rancho De La Palma make long before he does.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "It was tuned perfectly now to fit the small space of the office, sliding from phrase to phrase in Spanish as good as his hearer's own — and Don Santiago prided himself on the quality of his speech." <cite>(González 179)</cite>
+                        </blockquote>
+
+                        <p>McLane's command of Spanish is not incidental; it is González making the argument in miniature. Don Santiago's linguistic refinement is one of the markers by which he distinguishes himself and his culture, and McLane meets him there without effort or performance. The man Don Santiago has dismissed as a cultural inferior has taken the time to master what the don considers a mark of civilization, and does so fluently. The borderland between them narrows with every phrase, whether Don Santiago acknowledges it or not.</p>
+
+                        <blockquote class="analysis-quote quote-terracotta">
+                            "Reason will tell you that when two races like the Anglo Saxon and the Latin meet they meet as strangers... but a lot of it can be avoided with the right way of thinking." <cite>(González 180)</cite>
+                        </blockquote>
+
+                        <p>McLane's words are, in effect, the novel's thesis on the nature of the borderlands. The conflict at the heart of <em>Caballero</em> is not between irreconcilable peoples but between strangers who have not yet learned to see each other clearly; the borderland is a product of unfamiliarity, and unfamiliarity is not permanent. That it is the American who extends this reasoning to the Mexican patriarch, and that Don Santiago refuses it, is González's final irony. <em>Caballero</em> does not argue that tradition must be sacrificed for survival; it argues that survival requires the willingness to recognize what was never truly foreign to begin with, and that the women who understood this earliest are the ones left standing at the end.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- SECTION 04 -->
+        <section id="solito" class="content-section solito-section reveal">
+            <div class="section-header solito-header">
+                <span class="section-num">04</span>
+                <h2>Modern Reality: <em>Solito</em></h2>
+            </div>
+            <div class="analysis-stack">
+
+                <!-- 4.1 The Fragmented Family -->
+                <details class="analysis-node theme-solito">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="step-num">4.1</span>
+                            <div class="summary-text">
+                                <h4>The Fragmented Family</h4>
+                                <p>The image of the happy, nuclear American family is not the common one south of the border, with exploitative labor practices by the United States fracturing the family unit long before anyone crosses a line.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content">
+                        <p><em>Solito</em> opens not at the border, but well before it; Javier's family has already been fractured by the time his journey begins. His parents, seeking better economic opportunities, had already made the crossing to the United States before him, leaving Javier behind in El Salvador to be raised by grandparents and other family. The border does not break Javier's family in a single dramatic moment; it dismantles it gradually, across years and thousands of miles, through the quiet violence of economic necessity. By the time Javier makes the crossing himself at nine years old, he is not just traveling toward his parents, he is traveling toward the idea of a family that the border has already made abstract. It is in the vacuum left by this fracture that Javier becomes part of "The Four", and meets Patricia.</p>
+
+                        <blockquote class="analysis-quote">
+                            "When the name comes out of her mouth, it startles me. It's Mom's name. She's short like Mom, maybe one or two centimeters taller. And I know she has an edge, like Mom..." <cite>(Zamora 51)</cite>
+                        </blockquote>
+
+                        <p>Javier's immediate, instinctive connection to Patricia is not coincidental; it is the response of a child who has been without a mother figure for long enough that he reaches toward one the moment he recognizes its shape. That Patricia shares his mother's name, her height, and her particular quality of quiet strength is enough for Javier to orient himself around her for the rest of the journey. Throughout their arduous crossing, he notices her tenderness with her daughter, Carla, and longs for that from his own mother, holding on to that hope as Javier finds himself in motel after motel and crammed into dangerous situations. The found family he builds with Patricia, Carla, and Chino is not a replacement for what the border took; it is a survival structure, assembled from whatever familiarity and warmth the crossing allows. Zamora is careful to show that this bond is not incidental to the migration experience but central to it. The "outcasts" that find themselves in the border space can often find comfort in each other, having similar journeys, goals, and hardships to face.</p>
+
+                        <blockquote class="analysis-quote">
+                            "It's too fast. Finally, we don't have to hide from <span class="glossary-point" data-def="la-migra">La Migra</span>, from helicopters. We're inside a house in La USA. We're not hungry. Not thirsty. I want to talk more. No one will understand the bees in the desert, the flying fish, Doña's cooking, Paula, that fried fish in Acapulco, getting dragged out of the bus, learning what 'faak' means." <cite>(Zamora 372)</cite>
+                        </blockquote>
+
+                        <p>The grief in this passage demonstrates the nuance of the borderlands; even in victory and in celebration, there is grief, sacrifice, and separation. Despite finally reaching what he had been marching towards for weeks, Javier realizes that the people who cared for and loved him for that time are being taken from him. At the end of the journey, these found family members are another sacrifice Javier has to make to fully cross the border and reunite with his parents. The experiences he lists are not just memories, but intimate moments and a private vocabulary that only Patricia, Carla, and Chino can speak with him. Javier further goes on to doubt if anyone will believe him without the experience and word of his found family to back him up, expressing that the dangers, joys, and every stumbling obstacle on his crossing to be something so intimate and personal to those making the trek, no one else can understand, not even his parents who had to make their own journeys years prior. The unique nature of the obstacles and experience of those trying to cross the border then becomes both a deeply unifying and isolating event, one that Zamora communicates beautifully in this tragic separation.</p>
+
+                        <div class="glossary-defs">
+                            <div id="def-la-migra"><strong>La Migra:</strong> Colloquial term used in Latin American and border communities to refer to US Immigration and Customs Enforcement (ICE) or Border Patrol agents.</div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 4.2 Loss of Innocence -->
+                <details class="analysis-node theme-solito">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="step-num">4.2</span>
+                            <div class="summary-text">
+                                <h4>Loss of Innocence</h4>
+                                <p>There is no room for tears when crossing the border, and children aren't exempt; for many crossing, it's "Grow up or go home" — and their innocence is the cost.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content">
+                        <p><em>Caballero</em> saw an emphasis on the preservation of youth and innocence, expressly seen through Don Santiago's staunch protection and expectations of his daughters and son Luis, and his refusal to allow unchaperoned socialization. In <em>Solito</em>, however, there is no such shield or grace; Javier at only nine years old is compelled to cross an ocean, desert, and hundreds of miles between, just to reach his protectors. In his black backpack packed full with dark socks, dark shirts, and dark pants to quell their visibility while traveling at night, there is no room for innocence or naivety; Javier is forced to mature and become independent or be left behind. This can even be seen in the clothes he wears when beginning his journey, signaling the transition from childhood as a chapter to childhood as a cloak, to be hidden or put on depending on the situation.</p>
+
+                        <blockquote class="analysis-quote">
+                            "The outfit has been picked out: a nice dress shirt, dark blue. Dark-blue jeans. A black belt. Black dress shoes. ... Next to the hard-boiled eggs, avocado, queso duro, and tortillas, a black backpack. Even the brand name has been crossed out. Inside it: a dark T-shirt, black pants... 'Everything has to be dark colors,' Mali explains. 'Don Dago's orders.'" <cite>(Zamora 78)</cite>
+                        </blockquote>
+
+                        <p>This passage reads like a grocery list; each dark garment is chosen for its utility in concealing Javier as he crosses the desert, helping him disappear into the night. Even the brand name on the backpack is crossed out, erasing one more marker of individuality in favor of anonymity. This doesn't appear to be the packed bag of a child taking with him all his favorite parts of his life; Javier does not get to choose what to bring with him as he flees, and doesn't even get to determine his final outfit. This freedom of expression and the luxury to have it is just another thing the borderlands takes from those attempting to weather it. For Javier, getting dressed is no longer a neutral part of childhood routine; it becomes his first lesson in how to alter himself to fit the demands of the crossing. In <em>Caballero</em>, parents choose their children's clothes to align with class and propriety, believing it will protect their reputations; in <em>Solito</em>, Mali dresses Javier according to Don Dago's orders, knowing it is his body and safety she is trying to protect. The borderlands convert something as simple as color into a matter of safety, and in doing so, begin to drain childhood of its brightness.</p>
+
+                        <blockquote class="analysis-quote">
+                            "Now I'm embarrassed. Ashamed mine is small. Ashamed I looked. It was so close to me." <cite>(Zamora 365–366)</cite>
+                        </blockquote>
+
+                        <p>This forced, early introduction to adulthood is demonstrated profoundly in the prison bathroom, where Javier is forced to witness an adult man using the toilet in front of everyone. Prior to this point, he had never seen an adult body like this, and his immediate response was a rush of shame, comparison, and guilt for having looked at all. This compounds his own anxieties about having to use the bathroom, as he had been trekking through the desert for an entire day prior. The cell offered no door or partitions; there was no acknowledgement of the differences between the needs of a ten year old boy and a grown man. Everyone is forced to endure the same exposure, which is a poignant distinction of how the borderlands do not discriminate in its victimhood. These experiences, already traumatic for a young child, will continue to impact Javier long after he leaves the detention facility; the trauma and lived experiences collected on the journey are something unique and heavy he will have to carry wherever he ends up. Where <em>Caballero</em> works hard to maintain propriety and keep the children innocent through careful moderation and control, <em>Solito</em> forces its child protagonist to confront harsh, inhumane realities head on, in a space designed to strip away privacy and individuality, turning his own body into a site of shame that will persist long after leaving the detention center, and further proof that Javier's innocence is being sacrificed in his crossing.</p>
+
+                        <p>The physical toll of the journey finishes what these previous two scenes started; Javier walks for days through the desert, until his back, arms, thighs, and even "butt cheeks" ache as he is still forced to continue marching. His physical discomfort, and at some points inabilities, as Chino is forced to carry him at points, no longer becomes a valid excuse for rest, when in any other circumstance, the discomfort or danger of a child takes top priority. He rides on crowded buses for hours, crosses the ocean for the first time in a small boat, and learns quickly that hunger, thirst, and pain are constants he must learn to manage if he wants to make the crossing successfully. By the time he reaches California, Javier is only a couple weeks older than when he left El Salvador, but his journey has hardened him, and he has experiences far richer and more dangerous than any child his age should have. His innocence is not lost in one dramatic instant, but worn away by the demands of the borderland; each facet of childhood becoming a privilege that the border will not allow.</p>
+                    </div>
+                </details>
+
+                <!-- 4.3 Linguistic Borderlands -->
+                <details class="analysis-node theme-solito">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="step-num">4.3</span>
+                            <div class="summary-text">
+                                <h4>Linguistic Borderlands</h4>
+                                <p>Despite language being a connective thread, it can also be leveraged as a weapon to isolate and expel outsiders; for those seeking passage across the borderlands, a misspoken word or mispronounced phrase could and did lead to violence or deportation.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content">
+                        <p>Gloria Anzaldúa argued that <span class="glossary-point" data-def="lt">linguistic terrorism</span> occurs when a person's native language or tongue is policed or attacked by a dominant culture; these attacks extend beyond just language, but also target identity and can cause lasting psychological shame and harm. <em>Solito</em> sees this theory step out of the academic and into the existential as Javier's native Salvadoran slang and cadence becomes a danger; his language makes him a liability that could spell immediate deportation, danger, and/or violence if he cannot adapt in time.</p>
+
+                        <blockquote class="analysis-quote">
+                            "'You're Mexican, cabrones, talk like us,' the coyote says… 'Actually, don't talk… Remember things are called different here.'" <cite>(Zamora 114)</cite>
+                        </blockquote>
+
+                        <p>After arriving in Oaxaca, Mexico, the coyote who helped guide Javier and his cohort educates the group on Mexican slang and linguistic differences, such as using <em>frescos</em> instead of <em>agua fresca</em> in reference to the popular form of drink. When he realizes many in the group cannot convincingly "sound" Mexican, he decides their silence is safer; highlighting how often migrants are isolated and silenced as a means of survival.</p>
+
+                        <blockquote class="analysis-quote">
+                            "'You have to be careful with your words… ¿What do you want?'... 'Un Fresco', I say… he tries not to shout, raising his hands in the air. The three new men laugh… I look at the ground. I thought I'd practiced, but I forgot." <cite>(Zamora 114)</cite>
+                        </blockquote>
+
+                        <p>Javier's shame at being reprimanded for having forgotten a small nuance in Mexican vocabulary despite having only just arrived in the country emphasizes the lasting psychological harm that Anzaldúa theorized about; Javier is made to feel his un-belonging in every aspect, from his solitude to his speech.</p>
+                        <br>
+                        <p>On top of having to navigate the complexities of a new regional speech, Javier is forced to make sense of new vocabulary being thrown at him, often with derogatory or demeaning intent. At only nine, he is assaulted with words like <span class="glossary-point" data-def="migrante">migrante</span>, <span class="glossary-point" data-def="contrabando">contrabando</span>, and <span class="glossary-point" data-def="indio-43">indio</span>. Though initially confused, the violent and vulgar contexts in which they are used — including border patrol who forces Javier and his cohort to kneel on the side of the street with guns directed at them — clues Javier into their meaning. These charged terms aren't just words; they are labels that transform how Javier views himself and become a source of anxiety as he struggles to mask his identity and balance his own understanding of it, in order to cross the border space.</p>
+
+                        <blockquote class="analysis-quote">
+                            "Everyone [in Guatemala] looks different. Grandpa calls them 'indios' and when he says it, it doesn't sound nice. I think they look like us, just darker than Grandpa, a bit darker than me. All I know is that I'm an 'indio' también." <cite>(Zamora 58)</cite>
+                        </blockquote>
+
+                        <p>Despite not knowing exactly what an "indio" was, only that they were spoken upon negatively, Javier knows the word is associated with him; his confusion persists as the only difference he can discern between "indios" and those not struck with the label are nuances in skin color. His confusion points to the fact that he hadn't before been directly exposed to anti-migrant and colorist prejudices; something that those existing in the borderlands must constantly confront.</p>
+
+                        <blockquote class="analysis-quote">
+                            "I don't understand why Grandpa…[and] a lot of people in La Herrudura and here in Tecùn, say [indio] with so much disgust. I like the dresses women wear. They're so colorful and pretty." <cite>(Zamora 58)</cite>
+                        </blockquote>
+
+                        <p>This thought from Javier immediately follows his recollection of dressing up as "indios" for <span class="glossary-point" data-def="vguadalupe">El Día de la Virgen de Guadalupe</span> at his school, and his innocent confusion on where the dirty association with the word comes from is made doubly apparent by his swift transition into thoughts surrounding the pretty colors of women's dresses; highlighting how quickly children adapt and move on from confusing situations — doubly so for those forced to live in the borderland's in-betweens.</p>
+
+                        <div class="glossary-defs">
+                            <div id="def-lt"><strong>Linguistic Terrorism:</strong> The systemic delegitimization of a person's native tongue, used to shame and control identity.</div>
+                            <div id="def-migrante"><strong>Migrante:</strong> A term Javier learns as a legal and social label, marking him as "other" and a target for enforcement.</div>
+                            <div id="def-contrabando"><strong>Contrabando:</strong> Meaning "contraband"; here used to refer to the illegal transport of people, commodifying Javier's existence.</div>
+                            <div id="def-indio-43"><strong>Indio:</strong> A derogatory slur used to target Indigenous identity and darker skin tones, weaponized even within the migrant community.</div>
+                            <div id="def-vguadalupe"><strong>El Día de la Virgen de Guadalupe:</strong> A major Catholic feast day in Mexico and Latin America, celebrating the appearance of the Virgin Mary to Juan Diego, an Indigenous man.</div>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- 4.4 Perform to Survive -->
+                <details class="analysis-node theme-solito">
+                    <summary>
+                        <div class="summary-content">
+                            <span class="step-num">4.4</span>
+                            <div class="summary-text">
+                                <h4>Perform to Survive</h4>
+                                <p>To cross between these arbitrary "borderlands", many have to mask or discard their true identities, forcing migrants and those crossing to put on a performance just to have their existence validated.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content">
+                        <p><em>Caballero</em> is filled with performances that protect reputation and order within the hacienda and society at large; children and wives perform obedience, peones perform gratitude and servitude, and Don Santiago performs the role of benevolent <span class="glossary-point" data-def="hacendado">hacendado</span> to keep his world intact. When these roles are not performed, tensions rise and the carefully knit structures start to unravel. In <em>Solito</em>, these performances are no longer about honor and appearance, but about survival. These are not staged inside drawing rooms or balls, but in the desert, detention centers, and the border itself. Javier does not simply travel alongside Patricia, Carla, and Chino; he learns to inhabit a role within a family that is both deeply real and intimate, while also being carefully arranged to appear legitimate to coyotes and other officials. Their shared last names, carefully practiced introductions, and the way Javier orbits Patricia is all a script that must be convincing to strangers who hold the lives and safety of the little family in their hands. The tenderness between them is genuine, but the way they present themselves has to be deliberate; it is a cruel yet comforting performance demanded by a system that ironically is designed to tear families apart.</p>
+
+                        <p>This pressure to perform extends into the detention facility, where Javier learns quickly that even private emotions and bodily functions are subject to an unspoken code. Surrounded by grown men in the cage, he realizes he cannot behave like a frightened child without drawing attention; he learns to copy the others, pretending not to look and be unbothered when strangers use the bathroom in full view. The earlier shame he feels at seeing an adult body, and at the size of his own, is followed by an equally heavy shame at being visibly flustered at all. Javier understands that in this space, the role he is expected to play is that of someone older, harder, and more experienced. Where <em>Caballero</em>'s characters are punished for stepping out of their assigned roles in society, Javier risks punishment for failing to embody a role enforced through surveillance, discomfort, and threat of violence.</p>
+
+                        <p>Language itself, explored more fully in the previous card, also becomes part of this constant acting; Javier adjusts his accent, adopts new vocabulary, and learns which words to use and which to swallow to avoid marking himself as too young, too foreign, or too naive. Despite being new to everything, Javier is desperate to be seen as grown and capable enough to make the journey. Together, these layers of performance — the improvised family structure, the careful control of his body and reactions, and the contortion of his speech and slang — show that crossing the border is not just a journey through space, but an ongoing audition for the right to exist. In both <em>Caballero</em> and <em>Solito</em>, the borderlands are maintained not only by laws and geography, but by the roles people are forced to play just to survive within them.</p>
+
+                        <div class="glossary-defs">
+                            <div id="def-hacendado"><strong>Hacendado:</strong> The owner and patriarch of a hacienda; a role carrying expectations of absolute authority, generosity, and unimpeachable honor within the Mexican ranching class.</div>
+                            <div id="def-honra"><strong>Honra:</strong> Honor; in the context of 19th-century Mexican social life, a concept encompassing personal, familial, and class reputation, which governed nearly every social interaction.</div>
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- SECTION 05 -->
+        <section id="theory" class="content-section reveal">
+            <div class="section-header">
+                <span class="section-num">05</span>
+                <h2>Theoretical Framework</h2>
+            </div>
+            <div class="analysis-stack">
+                <details class="analysis-node theory-card anzaldua">
+                    <summary>
+                        <div class="summary-content">
+                            <div class="summary-text">
+                                <span class="category cat-terracotta">Gloria Anzaldúa</span>
+                                <h3>The Open Wound</h3>
+                                <p>Gloria Anzaldúa defines the border as a <em>herida abierta</em>, an open wound where the "Third World grates against the first and bleeds," creating a liminal space of stacked identities and constant psychological conflict.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content theory-expanded">
+                        <p>In her foundational text, <em>Borderlands/La Frontera</em>, Anzaldúa theorizes that the US-Mexico border is not a stagnant line, but instead a "vague and undetermined place created by the emotional residue of an unnatural boundary." This open wound is where the New Mestiza consciousness is born: a survival identity that embraces contradiction, multiple languages, and ambiguity. For Anzaldúa, the border is a physical manifestation of a spiritual and psychological clashing, where those who inhabit the in-between are forced to develop a specialized, heightened sense to navigate the dangers of the transition.</p>
+                        <br>
+                        <p>In <em>Solito</em>, Javier is the physical embodiment of this grating between worlds. His journey, which encompassed thousands of miles, is the "bleeding" that Anzaldúa writes about. To just exist in this borderland unscathed, Javier must adopt the hybrid identity of the New Mestiza — being part-child and part-adult, part-Salvadoran and part-Mexican; his identities are morphed as he is pushed to new limits in this arbitrary border space.</p>
+                        <br>
+                        <p><em>Caballero</em> depicts attempts to keep this wound closed through isolation and traditionalism, whereas <em>Solito</em> shows the ugly, modern reality of the gash between two nations, where Javier's innocence is the literal cost of the suture.</p>
+                    </div>
+                </details>
+
+                <details class="analysis-node theory-card vasconcelos">
+                    <summary>
+                        <div class="summary-content">
+                            <div class="summary-text">
+                                <span class="category cat-gold">José Vasconcelos</span>
+                                <h3>The Cosmic Race</h3>
+                                <p>José Vasconcelos proposed <em>La Raza Cósmica</em> as a utopian fifth race that would transcend racial exclusion through balanced racial blending, serving as a counter-narrative to 19th-century purity obsessions.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content theory-expanded">
+                        <p>Writing in the wake of the Mexican Revolution, Vasconcelos envisioned a cosmic race that would lead to a more universal era of humanity. He argued that the mixing of blood and culture — resulting in the <em>mestizaje</em> — was not a sign of degradation, but a necessary evolutionary step toward a world without racial hierarchy. In the context of <em>Caballero</em>, this theory directly challenges Don Santiago's obsession with purity and pure bloodlines, which he views as the solution to the encroachment of American occupiers. His refusal to adapt becomes his tragic flaw.</p>
+                        <br>
+                        <p>Vasconcelos's cosmic dream of unified hybridity remains a hollow promise, however, when held against the realities of <em>Solito</em>. Javier's journey reveals a landscape where the border has not only become more specialized in its violence, but one in which the smallest difference in accent, origin, or appearance can result in suspicion or violence. Javier's struggle proves that the "cosmic race" is still a distant utopia.</p>
+                    </div>
+                </details>
+
+                <details class="analysis-node theory-card paredes">
+                    <summary>
+                        <div class="summary-content">
+                            <div class="summary-text">
+                                <span class="category cat-charcoal">Américo Paredes</span>
+                                <h3>The Border Hero</h3>
+                                <p>While the corrido tradition almost exclusively immortalizes the male hero through violent defiance, <em>Caballero</em> critiques this machismo by showing how hyper-masculinity leads to the physical and social death of the Mexican estate.</p>
+                            </div>
+                        </div>
+                        <span class="expand-icon">+</span>
+                    </summary>
+                    <div class="expanded-content theory-expanded">
+                        <p>Américo Paredes's study of the "Border Hero," discussed in <span class="glossary-point" data-def="ph"><em>With His Pistol in His Hand</em></span>, defines resistance through a strictly masculine lens — a man with a pistol defending his honor against the Texas Rangers. Cortez becomes a hero by valiantly standing his ground and enacting erratic violence upon the "enemies," ending with a pile of bodies to his name. This very public and violent resistance to the enemy is meant to be sung and danced to, bolstering patriotic pride in the face of American occupation.</p>
+                        <br>
+                        <p>In <em>Caballero</em>, however, Jovita González offers a private, feminized critique of this script through the character of Alvaro. Unlike the legendary Cortez, Alvaro's attempts at valiant violence are portrayed as reckless and destructive — ultimately his downfall. In his attempts to fill the role of "border hero", he winds up dead, unliked, and a source of grief for the family he was supposed to protect. <em>Caballero</em> preaches that propriety and compromise are necessary to navigate the borderlands, and that pride and strength alone are not enough to thrive.</p>
+
+                        <div class="glossary-defs">
+                            <div id="def-ph"><strong><em>With His Pistol in His Hand</em>:</strong> Paredes's 1958 book that revolutionized Borderlands studies by analyzing the Gregorio Cortez legend.</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- SECTION 06 -->
+        <!-- <section id="intersections" class="content-section reveal">
+            <div class="section-header">
+                <span class="section-num">06</span>
+                <h2>Cross-Textual Intersections</h2>
+            </div>
+            <div class="intersections-grid">
+                <div class="intersection-card theme-gold">
+                    <span class="category">Paredes</span>
+                    <h3><em>With His Pistol in His Hand</em></h3>
+                    <p>Analysis of the Border Hero and the social power of the Corrido ballad tradition.</p>
+                </div>
+                <div class="intersection-card theme-teal">
+                    <span class="category">Anzaldúa</span>
+                    <h3><em>Borderlands/La Frontera</em> (Poetry)</h3>
+                    <p>Describing the physical and psychological landscape of the border zone.</p>
+                </div>
+                <div class="intersection-card theme-charcoal">
+                    <span class="category">Pelaez Lopez</span>
+                    <h3><em>The Afterlife of Illegality</em></h3>
+                    <p>Analyzing the long-term psychological shame of the "undocumented" label.</p>
+                </div>
+            </div>
+        </section>
+
+    </main> -->
+
+    <!-- FOOTER -->
+    <footer id="archive" class="footer-card">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="logo footer-logo">Border<span>lands</span></div>
+                <p class="footer-sub"><strong>AI DISCLOSURE:</strong> AI tools including Claude and Cursor were used to assist in HTML/CSS code generation. AI was not used to assist in the generation of any content.
+                All sources appropriately disclosed.</p>
+            </div>
+            <div class="footer-right">
+                <p class="footer-credit">Lana Wang</p>
+                <p>ENGL105: Borderlands Literatures</p>
+                <p>UC Irvine</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Guiding Question Button -->
+    <button class="gq-float-btn" id="gq-float-btn" aria-label="Show guiding question">
+        <span class="gq-float-pill">Guiding Question</span>
+    </button>
+    <div class="gq-float-popup" id="gq-float-popup">
+        <span class="gq-label">Guiding Question</span>
+        <p>How has the Borderlands evolved from a legal abstraction into a physical and psychological boundary?</p>
+    </div>
+
+    <!-- Tooltip element (shared, moved by JS) -->
+    <div class="glossary-tooltip" id="glossary-tooltip" role="tooltip"></div>
+
+    <script>
+        // --- MAP SLIDER ---
+        const tSlider = document.getElementById('timeline-slider');
+        const mSlider = document.getElementById('map-slider');
+        const middle = document.getElementById('map-middle');
+        const foreground = document.getElementById('map-foreground');
+        const mapBar = document.getElementById('map-bar');
+
+        function updateAll(val) {
+            tSlider.value = val;
+            mSlider.value = val;
+            mapBar.style.left = `${val}%`;
+            const threshold = 70;
+            if (val <= threshold) {
+                const percent = (val / threshold) * 100;
+                middle.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+                foreground.style.clipPath = `inset(0 0 0 100%)`;
+            } else {
+                const percent = ((val - threshold) / (100 - threshold)) * 100;
+                middle.style.clipPath = `inset(0 0 0 0)`;
+                foreground.style.clipPath = `inset(0 0 0 ${100 - percent}%)`;
+            }
+        }
+        tSlider.addEventListener('input', (e) => updateAll(e.target.value));
+        mSlider.addEventListener('input', (e) => updateAll(e.target.value));
+
+        // --- GLOSSARY TOOLTIP ---
+        const tooltip = document.getElementById('glossary-tooltip');
+        let tooltipVisible = false;
+
+        document.querySelectorAll('.glossary-point').forEach(point => {
+            const defId = point.getAttribute('data-def');
+
+            point.addEventListener('mouseenter', (e) => {
+                const defEl = document.getElementById('def-' + defId);
+                if (!defEl) return;
+                tooltip.innerHTML = defEl.innerHTML;
+                tooltip.classList.add('visible');
+                positionTooltip(e);
+            });
+
+            point.addEventListener('mousemove', positionTooltip);
+
+            point.addEventListener('mouseleave', () => {
+                tooltip.classList.remove('visible');
+            });
+        });
+
+        function positionTooltip(e) {
+            const gap = 14;
+            let x = e.clientX + gap;
+            let y = e.clientY - tooltip.offsetHeight / 2;
+
+            // Keep within viewport
+            if (x + tooltip.offsetWidth > window.innerWidth - 20) {
+                x = e.clientX - tooltip.offsetWidth - gap;
+            }
+            if (y < 10) y = 10;
+            if (y + tooltip.offsetHeight > window.innerHeight - 10) {
+                y = window.innerHeight - tooltip.offsetHeight - 10;
+            }
+
+            tooltip.style.left = x + 'px';
+            tooltip.style.top = y + 'px';
+        }
+
+        // --- SCROLL REVEAL ---
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        reveals.forEach(el => observer.observe(el));
+
+        // --- FLOATING GUIDING QUESTION BUTTON ---
+        const gqBtn = document.getElementById('gq-float-btn');
+        const gqPopup = document.getElementById('gq-float-popup');
+        const hero = document.getElementById('hero');
+
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    gqBtn.classList.add('visible');
+                } else {
+                    gqBtn.classList.remove('visible');
+                    gqPopup.classList.remove('show');
+                }
+            });
+        }, { threshold: 0.1 });
+        heroObserver.observe(hero);
+
+        gqBtn.addEventListener('mouseenter', () => gqPopup.classList.add('show'));
+        gqBtn.addEventListener('mouseleave', () => gqPopup.classList.remove('show'));
+        gqPopup.addEventListener('mouseenter', () => gqPopup.classList.add('show'));
+        gqPopup.addEventListener('mouseleave', () => gqPopup.classList.remove('show'));
+        document.querySelectorAll('details.analysis-node').forEach(details => {
+            details.addEventListener('toggle', () => {
+                const icon = details.querySelector('.expand-icon');
+                if (icon) icon.textContent = details.open ? '×' : '+';
+            });
+        });
+    </script>
+</body>
+</html>

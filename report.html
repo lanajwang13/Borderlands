@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiled Report | Borderlands</title>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,800;0,900;1,400&family=Lora:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="glass-nav">
+        <div class="logo">Border<span>lands</span></div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn">Home <span class="chevron">▾</span></a>
+                <div class="dropdown-content">
+                    <a href="index.html#definition">01. What Is the Borderlands?</a>
+                    <a href="index.html#context">02. Historical Context</a>
+                    <a href="index.html#anchor">03. Guiding Thread: Caballero</a>
+                    <a href="index.html#solito">04. Modern Reality: Solito</a>
+                    <a href="index.html#theory">05. Theory</a>
+                    <a href="index.html#intersections">06. Intersections</a>
+                </div>
+            </div>
+            <a href="solidarities.html">Solidarities</a>
+            <a href="gallery.html">Cultural Gallery</a>
+            <a href="index.html#archive" class="pill-btn">Archive</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="content-section reveal" style="padding-top: 110px;">
+            <div class="section-header">
+                <span class="section-num">↓</span>
+                <h2>Compiled Report</h2>
+            </div>
+
+            <div class="rich-card" style="padding: 52px 60px;">
+                <p style="font-family: 'Lora', serif; font-size: 1.15rem; line-height: 1.9; color: var(--charcoal-mid); margin-bottom: 40px;">
+                    Below is the contents of the research website compiled into a more traditionally read essay format.
+                </p>
+
+                <a href="EngReport.pdf" target="_blank" style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 14px;
+                    background: var(--charcoal);
+                    color: var(--white);
+                    text-decoration: none;
+                    padding: 20px 32px;
+                    border-radius: var(--radius-sm);
+                    font-family: 'Red Hat Display', sans-serif;
+                    font-weight: 800;
+                    font-size: 1rem;
+                    letter-spacing: 0.5px;
+                    transition: background 0.2s, transform 0.15s;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+                " onmouseover="this.style.background='var(--terracotta)'; this.style.transform='translateY(-2px)'"
+                   onmouseout="this.style.background='var(--charcoal)'; this.style.transform='translateY(0)'">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="12" y1="18" x2="12" y2="12"/>
+                        <polyline points="9 15 12 18 15 15"/>
+                    </svg>
+                    Borderlands: Creation and Cruelty — Full Report (PDF)
+                </a>
+
+                <div style="margin-top: 40px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--light-border); box-shadow: 0 4px 24px rgba(0,0,0,0.07);">
+                    <iframe
+                        src="EngReport.pdf"
+                        width="100%"
+                        height="900px"
+                        style="display: block; border: none;"
+                        title="Borderlands: Creation and Cruelty — Full Report">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="archive" class="footer-card">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="logo footer-logo">Border<span>lands</span></div>
+                <p class="footer-sub">The border is not a line. It is a wound, a negotiation, and a way of being.</p>
+            </div>
+            <div class="footer-right">
+                <p class="footer-credit">Lana Wang</p>
+                <p>ENGL105: Borderlands Literatures</p>
+                <p>UC Irvine</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        reveals.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

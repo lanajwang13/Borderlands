@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Gallery | Borderlands</title>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,800;0,900;1,400&family=Lora:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="otherstyle.css">
+</head>
+<body>
+
+    <nav class="glass-nav">
+        <div class="logo">Border<span>lands</span></div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn">Home <span class="chevron">▾</span></a>
+                <div class="dropdown-content">
+                    <a href="index.html#definition">01. What Is the Borderlands?</a>
+                    <a href="index.html#context">02. Historical Context</a>
+                    <a href="index.html#anchor">03. Guiding Thread: Caballero</a>
+                    <a href="index.html#solito">04. Modern Reality: Solito</a>
+                    <a href="index.html#theory">05. Theory</a>
+                    <a href="index.html#intersections">06. Intersections</a>
+                </div>
+            </div>
+            <!-- <a href="solidarities.html">Solidarities</a> -->
+            <a href="gallery.html">Cultural Gallery</a>
+            <a href="report.html">Report</a>
+            
+            <a href="index.html#archive" class="pill-btn">Archive</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <header class="gallery-hero">
+            <p class="gallery-eyebrow">Borderlands Literatures</p>
+            <h1 class="gallery-title">Cultural Gallery</h1>
+            <p class="gallery-subtitle">Explore the texts and sources explored throughout the course and dissected on this research site.</p>
+        </header>
+
+        <div class="gallery-grid">
+
+            <!-- Card 1: Borderlands/La Frontera -->
+            <div class="gallery-card-wrapper" id="gc-1">
+                <div class="gallery-card-inner">
+                    <div class="gallery-card-front">
+                        <div class="card-images">
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card1Pic.jpg" alt="Borderlands/La Frontera cover">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card1author.jpg" alt="Gloria Anzaldúa">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-top">
+                                <span class="card-tag tag-text">Theory</span>
+                                <button class="sources-flip-btn" onclick="flipCard('gc-1')">Sources ↗</button>
+                            </div>
+                            <h3>Borderlands/La Frontera<br><em>Gloria Anzaldúa</em></h3>
+                            <p>Gloria Anzaldúa's <em>herida abierta</em> defines the border as a psychological gash where worlds grate together.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card-back">
+                        <p class="card-back-label">Source</p>
+                        <p class="card-back-title">Borderlands/La Frontera<br><em>Gloria Anzaldúa</em></p>
+                        <a href="https://en.wikipedia.org/wiki/Borderlands/La_Frontera:_The_New_Mestiza" target="_blank" class="card-back-link">
+                            Borderlands/La Frontera — Wikipedia <span class="link-arrow">→</span>
+                         <a href="https://www.auntlute.com/borderlands" target="_blank" class="card-back-link">
+                            Borderlands/La Frontera — Aunt Lute<span class="link-arrow">→</span>
+                        </a>
+                        <p class="card-back-note">A foundational text in Chicana feminist theory and borderlands studies.</p>
+                        <button class="card-back-return" onclick="unflipCard('gc-1')">← Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Caballero -->
+            <div class="gallery-card-wrapper" id="gc-2">
+                <div class="gallery-card-inner">
+                    <div class="gallery-card-front">
+                        <div class="card-images">
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card2Pic.jpg" alt="Caballero book cover">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card2author.jpg" alt="Jovita González">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-top">
+                                <span class="card-tag tag-text">Primary Text</span>
+                                <button class="sources-flip-btn" onclick="flipCard('gc-2')">Sources ↗</button>
+                            </div>
+                            <h3>Caballero<br><em>Jovita González &amp; Eve Raleigh</em></h3>
+                            <p>A historical-romance collaboration that became a pillar in Mexican-American literature. Initially hidden when written due to political tensions, it was finally published in 1996.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card-back">
+                        <p class="card-back-label">Source</p>
+                        <p class="card-back-title">Caballero<br><em>Jovita González &amp; Eve Raleigh</em></p>
+                        <a href="https://en.wikipedia.org/wiki/Caballero:_A_Historical_Novel" target="_blank" class="card-back-link">
+                            Caballero: A Historical Novel — Wikipedia <span class="link-arrow">→</span>
+                            
+                            <a href="https://www.tamupress.com/book/9780890967003/caballero/" target="_blank" class="card-back-link">
+                            Caballero: A Historical Novel — Texas A&M University Press <span class="link-arrow">→</span>
+                        </a>
+                        <p class="card-back-note">Texas A&amp;M University Press, 1996. Written in the 1930s–40s, the manuscript remained unpublished for decades before its recovery by José Limón.</p>
+                        <button class="card-back-return" onclick="unflipCard('gc-2')">← Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Solito -->
+            <div class="gallery-card-wrapper" id="gc-3">
+                <div class="gallery-card-inner">
+                    <div class="gallery-card-front">
+                        <div class="card-images">
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card3Pic.jpg" alt="Solito book cover">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card3author.jpg" alt="Javier Zamora">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-top">
+                                <span class="card-tag tag-solito">Primary Text</span>
+                                <button class="sources-flip-btn" onclick="flipCard('gc-3')">Sources ↗</button>
+                            </div>
+                            <h3>Solito<br><em>Javier Zamora</em></h3>
+                            <p>A harrowing memoir following Zamora's journey across the border as a young child. Published in 2022, it won the American Book Award in 2023.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card-back">
+                        <p class="card-back-label">Source</p>
+                        <p class="card-back-title">Solito<br><em>Javier Zamora</em></p>
+                        <a href="https://revista.drclas.harvard.edu/a-review-of-solito-a-memoir/" target="_blank" class="card-back-link">
+                            Solito — ReVista Book Review <span class="link-arrow">→</span>
+                        </a>
+                        <p class="card-back-note">Review written by Juan R. Palomo. Winner of the 2023 American Book Award and the Lukas Book Prize. Zamora crossed the border alone at age nine in 1999.</p>
+                        <button class="card-back-return" onclick="unflipCard('gc-3')">← Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: La Raza Cósmica -->
+            <div class="gallery-card-wrapper" id="gc-4">
+                <div class="gallery-card-inner">
+                    <div class="gallery-card-front">
+                        <div class="card-images">
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card4Pic.jpg" alt="La Raza Cósmica cover">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card4author.jpg" alt="José Vasconcelos">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-top">
+                                <span class="card-tag tag-text">Theory</span>
+                                <button class="sources-flip-btn" onclick="flipCard('gc-4')">Sources ↗</button>
+                            </div>
+                            <h3>La Raza Cósmica<br><em>José Vasconcelos</em></h3>
+                            <p>Encapsulates Vasconcelos' vision of a new cosmic race that blends existing ones together as a solution to racial hierarchy.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card-back">
+                        <p class="card-back-label">Source</p>
+                        <p class="card-back-title">La Raza Cósmica<br><em>José Vasconcelos</em></p>
+                        <a href="https://en.wikipedia.org/wiki/La_raza_c%C3%B3smica" target="_blank" class="card-back-link">
+                            La Raza Cósmica — Wikipedia <span class="link-arrow">→</span>
+                        </a>
+                        <p class="card-back-note">Originally published 1925. A philosophical essay proposing that Latin America would give rise to a universal "fifth race" transcending racial divisions.</p>
+                        <button class="card-back-return" onclick="unflipCard('gc-4')">← Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: With His Pistol in His Hand -->
+            <div class="gallery-card-wrapper" id="gc-5">
+                <div class="gallery-card-inner">
+                    <div class="gallery-card-front">
+                        <div class="card-images">
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card5Pic.jpg" alt="With His Pistol in His Hand cover">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card5author.jpg" alt="Américo Paredes">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-top">
+                                <span class="card-tag tag-text">Theory</span>
+                                <button class="sources-flip-btn" onclick="flipCard('gc-5')">Sources ↗</button>
+                            </div>
+                            <h3>With His Pistol in His Hand<br><em>Américo Paredes</em></h3>
+                            <p>A classic in Mexican-American folklore following outlaw Gregorio Cortez as he avenges his brother's death against the Texas Rangers.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card-back">
+                        <p class="card-back-label">Source</p>
+                        <p class="card-back-title">With His Pistol in His Hand<br><em>Américo Paredes</em></p>
+                        <a href="https://en.wikipedia.org/wiki/With_His_Pistol_in_His_Hand" target="_blank" class="card-back-link">
+                            With His Pistol in His Hand — Wikipedia <span class="link-arrow">→</span>
+                        </a>
+                        <p class="card-back-note">University of Texas Press, 1958. Revolutionized Borderlands studies by centering the corrido tradition and the Gregorio Cortez legend as acts of cultural resistance.</p>
+                        <button class="card-back-return" onclick="unflipCard('gc-5')">← Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Treaty of Guadalupe Hidalgo -->
+            <div class="gallery-card-wrapper" id="gc-6">
+                <div class="gallery-card-inner">
+                    <div class="gallery-card-front">
+                        <div class="card-images">
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card6Pic.jpg" alt="Treaty of Guadalupe Hidalgo document">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card6author.jpg" alt="Treaty of Guadalupe Hidalgo context">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-top">
+                                <span class="card-tag tag-document">Primary Document</span>
+                                <button class="sources-flip-btn" onclick="flipCard('gc-6')">Sources ↗</button>
+                            </div>
+                            <h3>Treaty of Guadalupe Hidalgo<br><em>1848</em></h3>
+                            <p>The document that ended the Mexican-American War on a supposedly fair compromise — one that was systematically broken in the decades that followed.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card-back">
+                        <p class="card-back-label">Source</p>
+                        <p class="card-back-title">Treaty of Guadalupe Hidalgo<br><em>1848</em></p>
+                        <a href="https://www.archives.gov/milestone-documents/treaty-of-guadalupe-hidalgo" target="_blank" class="card-back-link">
+                            Treaty of Guadalupe Hidalgo — National Archives <span class="link-arrow">→</span>
+                        </a>
+                        <p class="card-back-note">Signed February 2, 1848. Transferred roughly half of Mexico's territory to the US and promised property rights to Mexican residents — promises rarely honored.</p>
+                        <button class="card-back-return" onclick="unflipCard('gc-6')">← Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7: Operation Gatekeeper -->
+            <div class="gallery-card-wrapper" id="gc-7">
+                <div class="gallery-card-inner">
+                    <div class="gallery-card-front">
+                        <div class="card-images">
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card7Pic.jpg" alt="Operation Gatekeeper document">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                            <div class="card-img-slot" onclick="openLightbox(this)">
+                                <img src="Card7author.jpg" alt="Operation Gatekeeper border enforcement">
+                                <div class="img-expand-hint"><span>Expand</span></div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <div class="card-info-top">
+                                <span class="card-tag tag-document">Primary Document</span>
+                                <button class="sources-flip-btn" onclick="flipCard('gc-7')">Sources ↗</button>
+                            </div>
+                            <h3>Operation Gatekeeper Order<br><em>Clinton Administration, 1994</em></h3>
+                            <p>The document formalizing the initiative to stop illegal immigration in San Diego through intense border enforcement — one that redirected migrants into the deadly desert instead.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-card-back">
+                        <p class="card-back-label">Source</p>
+                        <p class="card-back-title">Operation Gatekeeper Order<br><em>Clinton Administration, 1994</em></p>
+                        <a href="https://clinton.presidentiallibraries.us/items/show/36264" target="_blank" class="card-back-link">
+                            Operation Gatekeeper — Clinton Digital Library <span class="link-arrow">→</span>
+                        </a>
+                        <p class="card-back-note">Launched October 1, 1994. By militarizing the San Diego corridor, it funneled migrants into Arizona and New Mexico deserts, where thousands died in the years that followed.</p>
+                        <button class="card-back-return" onclick="unflipCard('gc-7')">← Back</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightboxBg(event)">
+        <div class="lightbox-inner">
+            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+            <img id="lightbox-img" src="" alt="">
+            <p class="lightbox-caption" id="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gallery-footer">
+        <div class="logo">Border<span>lands</span></div>
+        <p>Lana Wang · ENGL105: Borderlands Literatures · UC Irvine</p>
+    </footer>
+
+    <script>
+        function flipCard(id) {
+            document.getElementById(id).classList.add('flipped');
+        }
+        function unflipCard(id) {
+            document.getElementById(id).classList.remove('flipped');
+        }
+
+        /* Pull src and alt directly from the <img> inside the clicked slot */
+        function openLightbox(slot) {
+            event.stopPropagation();
+            const img = slot.querySelector('img');
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-img').alt = img.alt;
+            document.getElementById('lightbox-caption').textContent = img.alt;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightboxBg(e) {
+            if (e.target === document.getElementById('lightbox')) closeLightbox();
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+</body>
+</html>

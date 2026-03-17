@@ -1,0 +1,425 @@
+/* ============================================================
+   GALLERY.CSS — Cultural Gallery page styles
+   ============================================================ */
+
+/* ── Hero ── */
+.gallery-hero {
+    padding: 110px 0 60px;
+    text-align: center;
+}
+.gallery-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+.gallery-title {
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    color: var(--charcoal);
+}
+.gallery-subtitle {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.65;
+    max-width: 560px;
+    margin: 0 auto 60px;
+    line-height: 1.7;
+}
+
+/* ── Grid: 3-col desktop, 2-col laptop, 1-col mobile ── */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-bottom: 100px;
+    align-items: start;
+}
+
+/* ── Flip wrapper ── */
+.gallery-card-wrapper {
+    perspective: 1400px;
+}
+/* Fixed height so front and back are the same size */
+.gallery-card-inner {
+    position: relative;
+    height: 560px;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-style: preserve-3d;
+}
+.gallery-card-wrapper.flipped .gallery-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* ── Front & Back shared ── */
+.gallery-card-front,
+.gallery-card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 28px;
+    border: 1px solid var(--light-border);
+    background: var(--white);
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+}
+
+/* Front is just stacked normally (not rotated) */
+.gallery-card-front {
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gallery-card-wrapper:not(.flipped) .gallery-card-front:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.10);
+}
+
+.gallery-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 44px;
+    gap: 20px;
+}
+
+/* ── Dual image row ──
+   Fixed height image area; images use contain so nothing is cropped
+*/
+.card-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--sand-dark);
+    border-bottom: 1px solid var(--light-border);
+    height: 320px;
+    flex-shrink: 0;
+}
+.card-img-slot {
+    position: relative;
+    overflow: hidden;
+    background: var(--sand-dark);
+    cursor: zoom-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.card-img-slot:first-child {
+    border-right: 1px solid rgba(0,0,0,0.06);
+}
+.card-img-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-img-slot:hover img {
+    transform: scale(1.05);
+}
+
+/* ── Expand hint ── */
+.img-expand-hint {
+    position: absolute;
+    inset: 0;
+    background: rgba(37, 35, 32, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 10px 12px;
+    transition: background 0.25s;
+    pointer-events: none;
+}
+.card-img-slot:hover .img-expand-hint {
+    background: rgba(37, 35, 32, 0.18);
+}
+.img-expand-hint span {
+    background: rgba(255,255,255,0.95);
+    color: var(--charcoal);
+    font-size: 0.62rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.2s, transform 0.2s;
+}
+.card-img-slot:hover .img-expand-hint span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Card info ── */
+.card-info {
+    padding: 22px 26px 26px;
+}
+.card-info-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.card-tag {
+    display: inline-block;
+    font-size: 0.63rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+.tag-text     { background: var(--terracotta-light); color: var(--terracotta); }
+.tag-document { background: var(--gold-light);       color: var(--gold); }
+.tag-solito   { background: var(--turquoise-light);  color: var(--turquoise); }
+
+.sources-flip-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.63rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    background: none;
+    border: 1.5px solid var(--gold);
+    border-radius: 50px;
+    padding: 5px 13px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.sources-flip-btn:hover {
+    background: var(--gold);
+    color: var(--white);
+}
+
+.card-info h3 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 7px;
+    color: var(--charcoal);
+}
+.card-info p {
+    font-family: 'Lora', serif;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--charcoal-mid);
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* ── Back of card ── */
+.card-back-label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--terracotta);
+}
+.card-back-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.25;
+}
+.card-back-title em {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--charcoal-mid);
+    display: block;
+}
+.card-back-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--charcoal);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    border-bottom: 2px solid var(--light-border);
+    padding-bottom: 16px;
+    transition: color 0.2s, border-color 0.2s;
+}
+.card-back-link:hover {
+    color: var(--terracotta);
+    border-bottom-color: var(--terracotta);
+}
+.link-arrow {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+}
+.card-back-link:hover .link-arrow {
+    transform: translateX(4px);
+}
+.card-back-note {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--charcoal-mid);
+    opacity: 0.65;
+    line-height: 1.55;
+}
+.card-back-return {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--charcoal-mid);
+    background: none;
+    border: 1.5px solid var(--light-border);
+    border-radius: 50px;
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    align-self: flex-start;
+}
+.card-back-return:hover {
+    border-color: var(--charcoal-mid);
+    color: var(--charcoal);
+}
+
+/* ── Lightbox ── */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background: rgba(37, 35, 32, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.lightbox-inner {
+    position: relative;
+    max-width: 88vw;
+    max-height: 88vh;
+    transform: scale(0.94) translateY(12px);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lightbox.active .lightbox-inner {
+    transform: scale(1) translateY(0);
+}
+.lightbox-inner img {
+    display: block;
+    max-width: 100%;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+    object-fit: contain;
+    background: var(--sand-dark);
+}
+.lightbox-caption {
+    margin-top: 16px;
+    text-align: center;
+    color: rgba(255,255,255,0.72);
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+.lightbox-close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 40px;
+    height: 40px;
+    background: var(--white);
+    border: none;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--charcoal);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    font-weight: 800;
+    z-index: 10;
+}
+.lightbox-close:hover { transform: scale(1.12); }
+
+/* ── Footer ── */
+.gallery-footer {
+    background: var(--white);
+    border: 1px solid var(--light-border);
+    padding: 40px 64px;
+    border-radius: 48px;
+    margin: 0 auto 60px;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gallery-footer .logo {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+.gallery-footer .logo span { color: var(--terracotta); }
+.gallery-footer p { font-size: 0.85rem; opacity: 0.5; }
+
+/* ── Responsive ── */
+
+/* Laptop: 2 columns (769px–1100px) */
+@media (max-width: 1100px) and (min-width: 769px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet / mobile: 1 column */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-card-inner {
+        height: 520px;
+    }
+    .card-images {
+        height: 260px;
+    }
+    .gallery-footer {
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px;
+        text-align: center;
+    }
+}
