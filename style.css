@@ -1772,3 +1772,30 @@ strong { font-weight: 800; }
 .close-warning-btn:hover {
     transform: scale(1.05);
 }
+
+/* --- DROP-DOWN FIX --- */
+
+/* Keep the desktop hover working as usual */
+@media (padding-left: 0.1px) { /* Simple way to target desktop mouse users */
+    .dropdown:hover .dropdown-content {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* The 'Active' state for Mobile/Touch */
+.dropdown.is-active .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+
+/* Ensure the dropdown-content is hidden and doesn't block clicks when closed */
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none; /* Crucial: prevents ghost-clicks on invisible links */
+    /* ... keep your existing transition and styling ... */
+}
