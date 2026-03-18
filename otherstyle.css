@@ -987,3 +987,44 @@ main.container {
 .cactus-growth {
     perspective: 1000px;
 }
+
+
+/* --- SUN CONTAINER & LABEL CENTERING --- */
+
+.sun-container {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 3000;
+    cursor: pointer;
+    
+    /* Flexbox magic to stack and center */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 6px; /* Space between the sun and the text */
+}
+
+.sun-container p {
+    margin: 0; /* Removes default paragraph spacing */
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--terracotta);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Sync the label with the sun's hover state */
+.sun-container:hover p {
+    opacity: 1;
+    color: var(--gold);
+}
+
+/* Dark Mode adjustment */
+[data-theme="dark"] .sun-container p {
+    color: var(--gold);
+}
