@@ -1219,8 +1219,31 @@
         sunBtn.style.transform = 'rotate(0deg) scale(1)';
     }
     
+    document.addEventListener("DOMContentLoaded", function() {
+        const isSmallScreen = window.innerWidth <= 1024;
+        const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
+        // If both conditions are met, show the warning
+        if (isSmallScreen && isTouchDevice) {
+            document.getElementById('mobile-warning').style.display = 'flex';
+        }
+    });
+
+    function closeWarning() {
+        document.getElementById('mobile-warning').style.display = 'none';
+    }
+
     </script>
 
+    
+    <div id="mobile-warning" class="mobile-warning-overlay">
+        <div class="warning-content">
+            <div class="warning-icon">🌵</div>
+            <h3>Desert View Optimized</h3>
+            <p>This digital borderland was designed with intricate details intended for larger screens. For the best experience, please view on a <strong>laptop or desktop</strong>.</p>
+            <button onclick="closeWarning()" class="close-warning-btn">Enter Anyway</button>
+        </div>
+    </div>
     
 </body>
 </html>
