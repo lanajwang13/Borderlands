@@ -20,12 +20,13 @@
                     <a href="#anchor">03. Guiding Thread: Caballero</a>
                     <a href="#solito">04. Modern Reality: Solito</a>
                     <a href="#theory">05. Theory</a>
-                    <a href="#intersections">06. Intersections</a>
+                    <a href="#closing">06. Closing</a>
                 </div>
             </div>
             <!-- <a href="solidarities.html">Solidarities</a> -->
             <a href="gallery.html">Cultural Gallery</a>
             <a href="report.html">Report</a>
+            <a href="sources.html">Sources</a>
             <a href="#archive" class="pill-btn">Archive</a>
         </div>
     </nav>
@@ -42,7 +43,26 @@
                     <span class="bottom-line">Cruelty</span>
                 </div>
                 <p class="subtitle">"The Open Wound / Where the Third World Grates"<br><em>— Gloria Anzaldúa</em></p>
+                
+                
+
                 <div class="hero-guiding-q">
+                    <div class="guiding-questions-container">
+
+                        <div class="cactus-home-wrapper">
+                            <img src="HomePics/cacti.png" class="cactus-base-img" alt="Saguaro">
+                            
+                            <!-- <span class="blossom-home trunk-tip">✿</span>
+                            
+                            <span class="blossom-home left-top">✿</span>
+                            <span class="blossom-home right-top">✿</span>
+                            
+                            <span class="blossom-home left-low">✿</span>
+                            <span class="blossom-home right-low">✿</span> -->
+                        </div>
+
+                    
+                    </div>
                     <span class="gq-label">Guiding Question</span>
                     <p>How has the Borderlands evolved from a legal abstraction into a physical and psychological boundary?</p>
                 </div>
@@ -52,6 +72,15 @@
                 <div class="deco-circle deco-c2"></div>
                 <div class="deco-line"></div>
             </div>
+            
+            <div class="sun-container">
+                <svg class="spinning-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+                </svg>
+            </div>
+            
+
         </header>
 
         <!-- SECTION 01 -->
@@ -61,6 +90,7 @@
                 <h2>What Is the Borderlands?</h2>
             </div>
             <div class="rich-card intro-card">
+
                 <div class="intro-layout">
                     <div class="intro-text">
                         <p class="lead-in">A liminal space where identities are negotiated in the clash between two distinct worlds.</p>
@@ -385,6 +415,8 @@
             <div class="section-header">
                 <span class="section-num">03</span>
                 <h2>Guiding Thread: <em>Caballero</em></h2>
+                <img src="card2pic.jpg" class="section-main-cover" alt="Caballero Book Cover">
+
             </div>
             <div class="analysis-stack">
                 <details class="analysis-node">
@@ -626,7 +658,11 @@
             <div class="section-header solito-header">
                 <span class="section-num">04</span>
                 <h2>Modern Reality: <em>Solito</em></h2>
+
+                <img src="Card3pic.jpg" class="section-main-cover" alt="Solito Book Cover">
             </div>
+            
+
             <div class="analysis-stack">
 
                 <!-- 4.1 The Fragmented Family -->
@@ -953,6 +989,11 @@
             </div>
             <div class="footer-right">
                 <p class="footer-credit">Lana Wang</p>
+                
+                <a href="https://www.linkedin.com/in/lanajwang/" target="_blank" class="footer-profile-link">
+                    <img src="HomePics/pfp.png" alt="Lana Wang LinkedIn" class="footer-avatar">
+                </a>
+
                 <p>ENGL105: Borderlands Literatures</p>
                 <p>UC Irvine</p>
             </div>
@@ -1146,6 +1187,38 @@
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeLightbox();
     });
+
+    const sunBtn = document.querySelector('.sun-container');
+    const htmlEl = document.documentElement;
+
+    sunBtn.addEventListener('click', () => {
+        // Check current theme
+        const currentTheme = htmlEl.getAttribute('data-theme');
+        
+        if (currentTheme === 'dark') {
+            htmlEl.setAttribute('data-theme', 'light');
+            // Optional: Save preference to local storage
+            localStorage.setItem('theme', 'light');
+        } else {
+            htmlEl.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
+    // Check for saved user preference on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        htmlEl.setAttribute('data-theme', savedTheme);
+    }
+
+        // Inside your existing click listener
+    if (htmlEl.getAttribute('data-theme') === 'dark') {
+        sunBtn.style.transform = 'rotate(180deg) scale(1.1)';
+        // You can even change the SVG content here to a moon if you like!
+    } else {
+        sunBtn.style.transform = 'rotate(0deg) scale(1)';
+    }
+    
     </script>
 
     

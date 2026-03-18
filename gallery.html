@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="otherstyle.css">
 </head>
 <body>
+    <div class="sun-container">
+        <svg class="spinning-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+        </svg>
+    </div>
 
     <nav class="glass-nav">
         <div class="logo">Border<span>lands</span></div>
@@ -21,13 +27,14 @@
                     <a href="index.html#anchor">03. Guiding Thread: Caballero</a>
                     <a href="index.html#solito">04. Modern Reality: Solito</a>
                     <a href="index.html#theory">05. Theory</a>
-                    <a href="index.html#intersections">06. Intersections</a>
+                    <a href="index.html#closing">06. Closing</a>
                 </div>
             </div>
             <!-- <a href="solidarities.html">Solidarities</a> -->
             <a href="gallery.html">Cultural Gallery</a>
             <a href="report.html">Report</a>
-            
+            <a href="sources.html">Sources</a>
+
             <a href="index.html#archive" class="pill-btn">Archive</a>
         </div>
     </nav>
@@ -344,13 +351,48 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="gallery-footer">
-        <div class="logo">Border<span>lands</span></div>
-        <p>Lana Wang · ENGL105: Borderlands Literatures · UC Irvine</p>
+     <!-- FOOTER -->
+    <footer id="archive" class="footer-card">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="logo footer-logo">Border<span>lands</span></div>
+                <p class="footer-sub"><strong>AI DISCLOSURE:</strong> AI tools including Claude and Cursor were used to assist in HTML/CSS code generation. AI was not used to assist in the generation of any content.
+                All sources appropriately disclosed.</p>
+            </div>
+            <div class="footer-right">
+                <p class="footer-credit">Lana Wang</p>
+                
+                <a href="https://www.linkedin.com/in/lanajwang/" target="_blank" class="footer-profile-link">
+                    <img src="HomePics/pfp.png" alt="Lana Wang LinkedIn" class="footer-avatar">
+                </a>
+
+                <p>ENGL105: Borderlands Literatures</p>
+                <p>UC Irvine</p>
+            </div>
+        </div>
     </footer>
 
     <script>
+        
+        const sunBtn = document.querySelector('.sun-container');
+        const htmlEl = document.documentElement;
+
+        sunBtn.addEventListener('click', () => {
+            const isDark = htmlEl.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                htmlEl.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlEl.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Check preference on load
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlEl.setAttribute('data-theme', 'dark');
+        }
+
         function flipCard(id) {
             document.getElementById(id).classList.add('flipped');
         }

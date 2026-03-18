@@ -2,7 +2,7 @@
    CABALLERO AS COMPASS — style.css
    ============================================================ */
 
-/* --- 00. CORE VARIABLES & RESET --- */
+/* --- 00. CORE VARIABLES --- */
 :root {
     --terracotta: #B04A2D;
     --terracotta-light: rgba(176, 74, 45, 0.08);
@@ -10,58 +10,197 @@
     --turquoise-light: rgba(45, 139, 150, 0.08);
     --gold: #C9882A;
     --gold-light: rgba(201, 136, 42, 0.1);
-    --sand: #F7F0E4;
+    
+    /* Base Background (Solid Color) */
+    --sand: #F7F0E4; 
     --sand-dark: #EDE4D3;
-    --white: #ffffff;
+    
+    /* Text Colors */
     --charcoal: #252320;
     --charcoal-mid: #3D3A36;
+    --white: #ffffff;
     --light-border: rgba(0, 0, 0, 0.07);
     --radius-card: 36px;
     --radius-sm: 18px;
 }
 
+/* --- DARK MODE OVERRIDES (The Navy Collection) --- */
+[data-theme="dark"] {
+    /* The main navy background from your image */
+    --sand: #2D3A4F;          
+
+    /* The "Dark" Cards: An even deeper navy/charcoal for contrast */
+    --white: #1A212C;         
+    --sand-dark: #141A24;     /* Used for inner slots/borders */
+    
+    /* Text: Cream/Sand for readability */
+    --charcoal: #F7F0E4;      
+    --charcoal-mid: #EDE4D3;  
+    --light-border: rgba(255, 255, 255, 0.05);
+
+    /* Accents */
+    --terracotta: #E06C4D;    
+    --turquoise: #58C9D6;
+    --gold: #F0B354;
+}
+
+/* --- DARK MODE UI POLISH --- */
+[data-theme="dark"] .glass-nav {
+    background: rgba(30, 28, 26, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .nav-links a, 
+[data-theme="dark"] .logo,
+[data-theme="dark"] .section-header h2 {
+    color: var(--charcoal) !important;
+}
+
+[data-theme="dark"] .expanded-content,
+[data-theme="dark"] .analysis-node[open] {
+    background: #1E1C1A !important;
+    color: var(--charcoal-mid);
+}
+
+[data-theme="dark"] .spinning-sun {
+    color: var(--gold);
+    opacity: 1;
+}
+
+[data-theme="dark"] .closing-card {
+    background-color: #1E1C1A !important;
+}
+
+[data-theme="dark"] .closing-card .expanded-content {
+    background-color: transparent !important;
+    color: var(--charcoal);
+}
+
+[data-theme="dark"] .loopy-arrow {
+    filter: brightness(1.2) saturate(0.8);
+    opacity: 0.4;
+}
+
+/* --- DARK MODE: SECTION 01 & CLOSING CARDS --- */
+
+/* 1. Section 01 (Intro Card) */
+/* This overrides the hardcoded 'background: var(--charcoal)' from your original CSS */
+[data-theme="dark"] .intro-card {
+    background-color: #1A212C !important; 
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--charcoal) !important;
+}
+
+[data-theme="dark"] .intro-card .lead-in {
+    color: var(--gold) !important; /* Makes the "Creation and Cruelty" intro text pop */
+}
+
+/* 2. Closing Thoughts Card */
+/* This overrides the hardcoded '#fefcf9' background */
+[data-theme="dark"] .closing-card {
+    background-color: #1A212C !important;
+    border-left: 8px solid var(--terracotta) !important;
+}
+
+[data-theme="dark"] .closing-card .expanded-content {
+    background-color: transparent !important; /* Prevents the inner white box */
+    color: var(--charcoal-mid) !important;
+}
+
+/* 3. Footer Card Fix */
+[data-theme="dark"] .footer-card {
+    background-color: #141A24 !important; /* Slightly darker than the main cards */
+    border-color: var(--light-border);
+}
+
+[data-theme="dark"] .footer-sub {
+    color: var(--charcoal-mid);
+    opacity: 0.8;
+}
+
+/* --- DARK MODE: ACCORDION & HOVER FIXES --- */
+
+/* 1. Prevent the card from turning tan/brown on hover in Dark Mode */
+[data-theme="dark"] .analysis-node:hover {
+    background-color: #1E2533 !important; /* A slightly lighter navy than the background */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* 2. Ensure the card stays Navy when it is OPEN */
+[data-theme="dark"] .analysis-node[open] {
+    background-color: #1E2533 !important;
+    border-color: var(--light-border);
+}
+
+/* 3. Fix the Summary/Header area when open */
+[data-theme="dark"] .analysis-node summary {
+    background-color: transparent !important;
+}
+
+/* 4. Fix the text color inside the summary so it doesn't stay dark */
+[data-theme="dark"] .summary-text p,
+[data-theme="dark"] .summary-text h4 {
+    color: var(--charcoal) !important;
+}
+
+/* 5. The Content Interior (Where the actual analysis text lives) */
+[data-theme="dark"] .expanded-content {
+    background-color: #161C26 !important; /* Deeper navy for the inside */
+    color: var(--charcoal-mid) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+
+/* --- RESET & CORE --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
 
 body {
     font-family: 'Red Hat Display', sans-serif;
-    background-color: var(--sand);
+    /* Layering the grain SVG over the dynamic --sand color */
+    background: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E"),
+        var(--sand);
     color: var(--charcoal);
     line-height: 1.8;
     font-size: 1.05rem;
     position: relative;
-    /* Subtle grain texture */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    background-attachment: fixed;
 }
 
-/* ── DESERT BACKGROUND ──
-   Fixed to the right side of the viewport, repeating vertically,
-   fading out before it reaches the content area.
-   z-index: -1 so it sits behind all page content.
-*/
+/* --- DESERT BACKGROUND STRIP --- */
+/* --- 1. LIGHT MODE (Default) --- */
 html::after {
     content: '';
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
-    /* Controls how wide the desert strip is */
     width: 32%;
     z-index: -1;
-    background-image: url("DesertPic.png");
-    background-size: 100% auto;   /* fill width, natural height, then tile */
+    /* This looks for the file right next to index.html */
+    background-image: url("DesertPic.png"); 
+    background-size: 100% auto;
     background-repeat: repeat-y;
     background-position: top right;
-    /* Fade the left edge of the desert into the sand background color */
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 35%);
     mask-image: linear-gradient(to right, transparent 0%, black 35%);
     opacity: 0.55;
+    transition: background-image 0.4s ease-in-out; /* Smooth fade between images */
+}
+
+/* --- 2. DARK MODE (Force Swap) --- */
+/* Using html[data-theme="dark"] makes this rule more specific than the light one */
+html[data-theme="dark"]::after {
+    background-image: url("DarkDesertpic.png") !important;
+    opacity: 0.35;
+    filter: brightness(0.7) contrast(1.1);
 }
 
 .container { width: 90%; max-width: 1100px; margin: 0 auto; }
 
-/* Ensure all page content sits above the fixed desert background */
 main, footer, .glass-nav {
     position: relative;
     z-index: 1;
@@ -1251,4 +1390,251 @@ strong { font-weight: 800; }
         width: 60px;
         height: 50px;
     }
+}
+
+/* --- Big Section Cover Styles --- */
+
+.section-header {
+    display: flex;
+    align-items: center; /* Aligns title and book cover vertically */
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.header-text-group {
+    flex: 1; /* Pushes the image to the right, or keeps it tucked next to text */
+}
+
+.section-main-cover {
+    width: 180px;         /* Significant size for a "Big Part" header */
+    height: 260px;        /* Maintains book proportions */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* Heavy shadow for depth */
+    border: 1px solid var(--light-border);
+    transition: transform 0.3s ease;
+
+    margin-left: auto;
+    margin-right: 15%;
+    transform: rotate(2deg);
+    transition: transform 0.3s ease;
+    
+}
+
+/* Optional: Slight tilt to make it look like a physical book on a desk */
+.section-main-cover:hover {
+    transform: rotate(-3deg) scale(1.02);
+}
+
+.section-subtitle {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    opacity: 0.6;
+    margin-top: 5px;
+}
+
+/* Responsive: Shrink the cover or stack it on mobile */
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .section-main-cover {
+        width: 120px;
+        height: 180px;
+        align-self: center; /* Center the book on mobile screens */
+    }
+}
+
+/* --- SPINNING SUN --- */
+
+.sun-container {
+    position: fixed; /* Stays in the corner while scrolling */
+    top: 30px;
+    left: 30px;
+    z-index: 3000; /* Sits above the nav */
+    cursor: pointer;
+}
+
+.spinning-sun {
+    width: 50px;
+    height: 50px;
+    color: var(--terracotta);
+    opacity: 0.6;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+}
+
+/* The Spin Animation */
+@keyframes continuous-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Hover State */
+.sun-container:hover .spinning-sun {
+    opacity: 1;
+    color: var(--gold);
+    /* Starts spinning when you hover */
+    animation: continuous-spin 4s linear infinite;
+}
+
+/* Responsive: Hide or move on small screens so it doesn't overlap text */
+@media (max-width: 1024px) {
+    .sun-container {
+        display: none; 
+    }
+}
+
+
+/* --- ENLARGED & RE-GROUNDED CACTUS --- */
+
+.guiding-questions-container {
+    position: relative;
+    overflow: visible !important;
+    /* This ensures your existing padding/font styles stay locked in */
+    display: block; 
+}
+
+.cactus-home-wrapper {
+    position: absolute;
+    /* 1. Snaps to the top of the box */
+    bottom: 100%; 
+    left: -90px;
+    
+    /* 2. HEIGHT CONTROL: 
+       If it's too low, make this number smaller (e.g., -5px). 
+       If it's too high, make it larger (e.g., -15px). */
+    margin-bottom: 30px; 
+    
+    /* 3. SIZE CONTROL: 
+       Increased from 130px to 220px for a 'much bigger' look */
+    width: 350px; 
+    height: auto;
+    
+    z-index: 10;
+    pointer-events: none;
+}
+
+.cactus-base-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    mix-blend-mode: multiply; 
+}
+
+/* --- FOOTER PROFILE IMAGE --- */
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Keeps everything aligned to the right */
+    gap: 8px; /* Adds consistent spacing between name, photo, and school */
+}
+
+.footer-profile-link {
+    display: inline-block;
+    margin: 5px 0; /* Space above and below the photo */
+    transition: transform 0.3s ease;
+}
+
+.footer-avatar {
+    width: 60px;  /* Adjust size as needed */
+    height: 60px; /* Must match width for a perfect circle */
+    object-fit: cover; /* Prevents the image from stretching */
+    border-radius: 50%; /* This creates the circle */
+    border: 2px solid var(--terracotta); /* Optional: matches your site accent */
+    display: block;
+}
+
+/* Hover Effect */
+.footer-profile-link:hover {
+    transform: scale(1.1); /* Slight pop when hovering */
+}
+
+.footer-profile-link:hover .footer-avatar {
+    border-color: var(--gold); /* Changes border color on hover */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* --- FOOTER PROFILE OVERRIDE --- */
+
+.footer-profile-link {
+    display: inline-block !important;
+    margin: 10px 0 !important;
+    opacity: 1 !important; /* Forces it to be 100% visible */
+    filter: none !important; /* Removes any grayscale/blur/sepia */
+    text-decoration: none !important;
+    position: relative;
+    z-index: 99; /* Ensures it sits on top of any footer overlays */
+}
+
+.footer-avatar {
+    width: 80px !important;  /* Bigger size as requested */
+    height: 80px !important; 
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2.5px solid var(--terracotta) !important;
+    
+    /* These three lines are the 'Anti-Gray' fix */
+    filter: grayscale(0%) brightness(1) contrast(1) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect - Glow & Lift */
+.footer-profile-link:hover .footer-avatar {
+    transform: translateY(-5px) scale(1.05);
+    border-color: var(--gold) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+    filter: brightness(1.1) !important; /* Makes it pop on hover */
+}
+
+/* Fix for potential footer-wide link graying */
+.footer-right a.footer-profile-link {
+    color: inherit !important;
+}
+
+/* --- ULTIMATE COLOR RESTORE FOR PROFILE PHOTO --- */
+
+/* 1. Lift the profile link out of the 0.5 opacity of the footer-right parent */
+.footer-right .footer-profile-link {
+    opacity: 1 !important;
+    filter: none !important;
+    -webkit-filter: grayscale(0) !important;
+}
+
+.footer-avatar {
+    /* 2. Standardize size and shape */
+    width: 90px !important; 
+    height: 90px !important;
+    border-radius: 50% !important;
+    
+    /* 3. Force color rendering */
+    opacity: 1 !important;
+    filter: grayscale(0%) brightness(1.05) contrast(1.05) !important;
+    
+    /* 4. Ensure no blend modes from the cactus code leak into the footer */
+    mix-blend-mode: normal !important; 
+    
+    border: 3px solid var(--terracotta) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* 5. Enhanced Hover State */
+.footer-profile-link:hover .footer-avatar {
+    transform: scale(1.1) translateY(-5px);
+    border-color: var(--gold) !important;
+    box-shadow: 0 8px 25px rgba(201, 136, 42, 0.3) !important;
+    filter: brightness(1.1) contrast(1.1) !important;
+}
+
+/* 6. Fix for Dark Mode footer graying */
+[data-theme="dark"] .footer-avatar {
+    border-color: var(--gold) !important;
+    filter: brightness(1.2) contrast(1.1) !important;
 }
